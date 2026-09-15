@@ -13,33 +13,49 @@
     .price-tag { font-variant-numeric: tabular-nums; }
   </style>
 </head>
-<body class="bg-[#fcf7f8] text-stone-800 min-h-screen pb-16">
+<body class="bg-[#fff7f8] text-stone-800 min-h-screen pb-16">
 
   <!-- הגדרת מספר וואטסאפ מובנה -->
   <script>
     const MY_WHATSAPP_PHONE = "972539621454";
   </script>
 
-  <!-- באנר עליון עם תמונת ארבעת המינים ברקע וגוון ורדרד נעים -->
-  <header class="relative bg-stone-900 text-white pt-14 pb-16 px-4 shadow-sm overflow-hidden">
-    <div class="absolute inset-0 bg-cover bg-center opacity-30 scale-105"
-         style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Four_species.jpg/800px-Four_species.jpg');">
-    </div>
-    <div class="absolute inset-0 bg-gradient-to-b from-rose-950/80 via-rose-900/60 to-[#fcf7f8]"></div>
-
-    <div class="max-w-3xl mx-auto text-center relative z-10 space-y-3">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-rose-100/20 backdrop-blur-md text-rose-100 text-xs font-medium border border-rose-200/30">
-        <span>🌸</span> חג הסוכות • מהדרין מן המהדרין
+  <!-- באנר עליון עם איור עשיר של ארבעת המינים ורקע ורדרד נעים -->
+  <header class="relative bg-gradient-to-b from-[#3a1d28] via-[#5c2d3d] to-[#fff7f8] text-white pt-12 pb-16 px-4 shadow-sm overflow-hidden text-center">
+    <div class="max-w-2xl mx-auto relative z-10 space-y-3">
+      <!-- תצוגת ארבעת המינים המרכזית בבאנר -->
+      <div class="w-20 h-20 mx-auto rounded-3xl bg-white/10 backdrop-blur-md border border-rose-300/30 flex items-center justify-center p-2 shadow-inner">
+        <svg viewBox="0 0 100 100" class="w-full h-full drop-shadow">
+          <!-- לולב ירוק גבוה -->
+          <line x1="45" y1="95" x2="45" y2="5" stroke="#2e7d32" stroke-width="4" stroke-linecap="round"/>
+          <line x1="45" y1="20" x2="38" y2="10" stroke="#388e3c" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="45" y1="25" x2="52" y2="15" stroke="#388e3c" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="45" y1="40" x2="35" y2="28" stroke="#388e3c" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="45" y1="45" x2="55" y2="33" stroke="#388e3c" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- הדסים -->
+          <path d="M56 40 Q62 30 60 20 Q54 28 56 40" fill="#1b5e20"/>
+          <path d="M58 55 Q65 45 63 35 Q56 43 58 55" fill="#1b5e20"/>
+          <!-- ערבות -->
+          <path d="M34 50 Q26 38 28 25 Q32 37 34 50" fill="#4caf50"/>
+          <path d="M32 70 Q22 58 24 45 Q28 57 32 70" fill="#4caf50"/>
+          <!-- אתרוג זהוב -->
+          <path d="M48 95 C32 95 30 75 42 60 C46 54 48 50 48 48 C48 50 50 54 54 60 C66 75 64 95 48 95 Z" fill="#ffd600" stroke="#fbc02d" stroke-width="2"/>
+          <circle cx="48" cy="46" r="2" fill="#8d6e63"/>
+        </svg>
       </div>
-      <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow-sm">ארבעת המינים למהדרין</h1>
-      <p class="text-rose-100/90 text-sm md:text-base max-w-lg mx-auto font-normal">
-        בחרו את הסט שלכם, הוסיפו אביזרים נלווים ושלחו את ההזמנה ישירות לוואטסאפ
+
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-rose-200/20 backdrop-blur-md text-rose-100 text-xs font-medium border border-rose-200/30">
+        <span>🌸</span> חג הסוכות • כשרות מהודרת ומפוקחת
+      </div>
+      <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white drop-shadow-sm">ארבעת המינים למהדרין</h1>
+      <p class="text-rose-100/90 text-xs md:text-sm max-w-md mx-auto font-normal">
+        בחרו את הסט והאביזרים הרצויים ושלחו את ההזמנה ישירות לוואטסאפ
       </p>
     </div>
   </header>
 
   <!-- תוכן ראשי -->
-  <main class="max-w-5xl mx-auto px-4 -mt-8 relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-6">
+  <main class="max-w-5xl mx-auto px-4 -mt-6 relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-6">
 
     <!-- עמודת בחירה וטפסים -->
     <div class="lg:col-span-8 space-y-6">
@@ -61,8 +77,18 @@
           <!-- סט כשר בסיסי -->
           <div class="p-3.5 rounded-2xl border border-rose-100 bg-[#fffafb] flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition hover:border-rose-300">
             <div class="flex items-center gap-3">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Four_species.jpg/320px-Four_species.jpg" 
-                   alt="סט ארבעת המינים" class="w-14 h-14 rounded-2xl object-cover border border-rose-200 shrink-0">
+              <!-- תמונת סט ארבעת המינים -->
+              <div class="w-14 h-14 rounded-2xl bg-amber-50 border border-rose-200 flex items-center justify-center p-1 shrink-0">
+                <svg viewBox="0 0 100 100" class="w-full h-full">
+                  <line x1="45" y1="95" x2="45" y2="5" stroke="#2e7d32" stroke-width="4" stroke-linecap="round"/>
+                  <line x1="45" y1="20" x2="38" y2="10" stroke="#388e3c" stroke-width="2.5" stroke-linecap="round"/>
+                  <line x1="45" y1="25" x2="52" y2="15" stroke="#388e3c" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M56 40 Q62 30 60 20 Q54 28 56 40" fill="#1b5e20"/>
+                  <path d="M34 50 Q26 38 28 25 Q32 37 34 50" fill="#4caf50"/>
+                  <path d="M48 95 C32 95 30 75 42 60 C46 54 48 50 48 48 C48 50 50 54 54 60 C66 75 64 95 48 95 Z" fill="#ffd600" stroke="#fbc02d" stroke-width="2"/>
+                  <circle cx="48" cy="46" r="2" fill="#8d6e63"/>
+                </svg>
+              </div>
               <div>
                 <div class="flex items-center gap-2">
                   <span class="font-bold text-stone-800 text-sm">סט כשר בסיסי</span>
@@ -85,8 +111,18 @@
               הכי מבוקש ✨
             </span>
             <div class="flex items-center gap-3">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Four_species.jpg/320px-Four_species.jpg" 
-                   alt="סט מהודר" class="w-14 h-14 rounded-2xl object-cover border border-rose-300 shrink-0">
+              <!-- תמונת סט ארבעת המינים -->
+              <div class="w-14 h-14 rounded-2xl bg-amber-50 border border-rose-300 flex items-center justify-center p-1 shrink-0">
+                <svg viewBox="0 0 100 100" class="w-full h-full">
+                  <line x1="45" y1="95" x2="45" y2="5" stroke="#2e7d32" stroke-width="4" stroke-linecap="round"/>
+                  <line x1="45" y1="20" x2="38" y2="10" stroke="#388e3c" stroke-width="2.5" stroke-linecap="round"/>
+                  <line x1="45" y1="25" x2="52" y2="15" stroke="#388e3c" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M56 40 Q62 30 60 20 Q54 28 56 40" fill="#1b5e20"/>
+                  <path d="M34 50 Q26 38 28 25 Q32 37 34 50" fill="#4caf50"/>
+                  <path d="M48 95 C32 95 30 75 42 60 C46 54 48 50 48 48 C48 50 50 54 54 60 C66 75 64 95 48 95 Z" fill="#ffd600" stroke="#fbc02d" stroke-width="2"/>
+                  <circle cx="48" cy="46" r="2" fill="#8d6e63"/>
+                </svg>
+              </div>
               <div>
                 <div class="flex items-center gap-2">
                   <span class="font-bold text-stone-900 text-sm">סט מהודר</span>
@@ -106,8 +142,18 @@
           <!-- סט פרימיום -->
           <div class="p-3.5 rounded-2xl border border-amber-200 bg-[#fffdf8] flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition hover:border-amber-300">
             <div class="flex items-center gap-3">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Four_species.jpg/320px-Four_species.jpg" 
-                   alt="סט פרימיום" class="w-14 h-14 rounded-2xl object-cover border border-amber-200 shrink-0">
+              <!-- תמונת סט ארבעת המינים -->
+              <div class="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-300 flex items-center justify-center p-1 shrink-0">
+                <svg viewBox="0 0 100 100" class="w-full h-full">
+                  <line x1="45" y1="95" x2="45" y2="5" stroke="#2e7d32" stroke-width="4" stroke-linecap="round"/>
+                  <line x1="45" y1="20" x2="38" y2="10" stroke="#388e3c" stroke-width="2.5" stroke-linecap="round"/>
+                  <line x1="45" y1="25" x2="52" y2="15" stroke="#388e3c" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M56 40 Q62 30 60 20 Q54 28 56 40" fill="#1b5e20"/>
+                  <path d="M34 50 Q26 38 28 25 Q32 37 34 50" fill="#4caf50"/>
+                  <path d="M48 95 C32 95 30 75 42 60 C46 54 48 50 48 48 C48 50 50 54 54 60 C66 75 64 95 48 95 Z" fill="#ffd600" stroke="#fbc02d" stroke-width="2"/>
+                  <circle cx="48" cy="46" r="2" fill="#8d6e63"/>
+                </svg>
+              </div>
               <div>
                 <div class="flex items-center gap-2">
                   <span class="font-bold text-stone-900 text-sm">סט פרימיום - מהודר מן המהודר</span>
@@ -148,7 +194,7 @@
         </div>
       </section>
 
-      <!-- שלב 2: תוספות עם התמונות המדויקות -->
+      <!-- שלב 2: תוספות עם התמונות הייעודיות -->
       <section class="bg-white rounded-3xl p-6 shadow-xs border border-rose-100">
         <div class="flex items-center gap-3 pb-4 mb-4 border-b border-rose-50">
           <span class="w-8 h-8 rounded-full bg-rose-500 text-white font-bold text-sm flex items-center justify-center shadow-xs">2</span>
@@ -159,12 +205,20 @@
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <!-- קופסה מהודרת לאתרוג -->
+          <!-- קופסה שחורה מעוצבת לאתרוג -->
           <div class="p-3 rounded-2xl border border-rose-100 bg-[#fffafb] flex items-center justify-between">
             <div class="flex items-center gap-2.5">
-              <img id="img-box" alt="קופסה לאתרוג" class="w-12 h-12 rounded-xl object-contain bg-white border border-rose-200 p-0.5 shrink-0">
+              <div class="w-12 h-12 rounded-xl bg-stone-900 border border-stone-800 flex items-center justify-center p-1 shrink-0 relative overflow-hidden">
+                <!-- ידית וקופסה שחורה עם עיטור זהב -->
+                <svg viewBox="0 0 60 50" class="w-full h-full">
+                  <path d="M22 15 Q30 5 38 15" stroke="#bcaaa4" stroke-width="2.5" fill="none"/>
+                  <rect x="5" y="15" width="50" height="30" rx="3" fill="#1c1917" stroke="#44403c" stroke-width="1.5"/>
+                  <text x="36" y="27" font-size="7" fill="#d4af37" font-family="serif" font-weight="bold">אתרוג</text>
+                  <path d="M8 38 Q25 25 52 38" stroke="#d4af37" stroke-width="1.8" fill="none"/>
+                </svg>
+              </div>
               <div>
-                <div class="font-bold text-xs text-stone-800">קופסה מפוארת לאתרוג</div>
+                <div class="font-bold text-xs text-stone-800">קופסה מהודרת לאתרוג</div>
                 <div class="text-rose-600 font-bold text-xs">₪35</div>
               </div>
             </div>
@@ -175,10 +229,17 @@
             </div>
           </div>
 
-          <!-- נרתיק מרופד ללולב -->
+          <!-- נרתיק כחול/שחור ארוך ללולב -->
           <div class="p-3 rounded-2xl border border-rose-100 bg-[#fffafb] flex items-center justify-between">
             <div class="flex items-center gap-2.5">
-              <img id="img-case" alt="נרתיק ללולב" class="w-12 h-12 rounded-xl object-contain bg-white border border-rose-200 p-0.5 shrink-0">
+              <div class="w-12 h-12 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center p-1 shrink-0">
+                <!-- נרתיק אלכסוני עם רצועה ועיטור גלים -->
+                <svg viewBox="0 0 50 50" class="w-full h-full">
+                  <rect x="10" y="2" width="8" height="46" rx="3" transform="rotate(-35 25 25)" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+                  <path d="M12 12 Q25 25 38 38" stroke="#ffffff" stroke-width="1" stroke-dasharray="2 1" fill="none"/>
+                  <path d="M22 28 C26 32 28 30 30 27" stroke="#ffffff" stroke-width="1.2" fill="none"/>
+                </svg>
+              </div>
               <div>
                 <div class="font-bold text-xs text-stone-800">נרתיק מרופד ללולב</div>
                 <div class="text-rose-600 font-bold text-xs">₪25</div>
@@ -191,10 +252,20 @@
             </div>
           </div>
 
-          <!-- ערבות נוספות -->
+          <!-- מארז ערבות לבלוב (חזון איש) -->
           <div class="p-3 rounded-2xl border border-rose-100 bg-[#fffafb] flex items-center justify-between">
             <div class="flex items-center gap-2.5">
-              <img id="img-aravot" alt="ערבות" class="w-12 h-12 rounded-xl object-contain bg-white border border-rose-200 p-0.5 shrink-0">
+              <div class="w-12 h-12 rounded-xl bg-white border border-rose-200 flex items-center justify-center p-1 shrink-0 relative overflow-hidden">
+                <!-- שקית ערבות עם כיתוב אדום/ירוק -->
+                <svg viewBox="0 0 40 50" class="w-full h-full">
+                  <rect x="5" y="2" width="30" height="46" rx="2" fill="#ffffff" stroke="#c8e6c9" stroke-width="1.5"/>
+                  <line x1="15" y1="5" x2="15" y2="45" stroke="#4caf50" stroke-width="1.5"/>
+                  <line x1="25" y1="5" x2="25" y2="45" stroke="#388e3c" stroke-width="1.5"/>
+                  <rect x="8" y="10" width="24" height="6" fill="#ffebee" rx="1"/>
+                  <text x="12" y="15" font-size="4" fill="#c62828" font-weight="bold">ערבות</text>
+                  <text x="10" y="20" font-size="3" fill="#2e7d32">חזון איש</text>
+                </svg>
+              </div>
               <div>
                 <div class="font-bold text-xs text-stone-800">ערבות לבלוב (חזון איש)</div>
                 <div class="text-rose-600 font-bold text-xs">₪15</div>
@@ -207,10 +278,18 @@
             </div>
           </div>
 
-          <!-- טבעות לקשירה -->
+          <!-- טבעות זהב/מתכת לקשירה -->
           <div class="p-3 rounded-2xl border border-rose-100 bg-[#fffafb] flex items-center justify-between">
             <div class="flex items-center gap-2.5">
-              <img id="img-rings" alt="טבעות" class="w-12 h-12 rounded-xl object-contain bg-white border border-rose-200 p-0.5 shrink-0">
+              <div class="w-12 h-12 rounded-xl bg-amber-50/60 border border-amber-200 flex items-center justify-center p-1 shrink-0">
+                <!-- טבעות זהב מרוכזות -->
+                <svg viewBox="0 0 50 50" class="w-full h-full">
+                  <circle cx="20" cy="20" r="8" fill="none" stroke="#eab308" stroke-width="2.5"/>
+                  <circle cx="30" cy="22" r="7" fill="none" stroke="#ca8a04" stroke-width="2.2"/>
+                  <circle cx="25" cy="32" r="8" fill="none" stroke="#facc15" stroke-width="2.5"/>
+                  <circle cx="16" cy="30" r="6" fill="none" stroke="#eab308" stroke-width="2"/>
+                </svg>
+              </div>
               <div>
                 <div class="font-bold text-xs text-stone-800">מארז טבעות לקשירה</div>
                 <div class="text-rose-600 font-bold text-xs">₪10</div>
@@ -318,7 +397,7 @@
           <span id="grandTotal" class="text-2xl font-extrabold text-rose-600 price-tag">₪0</span>
         </div>
 
-        <!-- כפתור שליחה יפה -->
+        <!-- כפתור שליחה לוואטסאפ -->
         <button onclick="sendOrderToWhatsApp()" class="w-full mt-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-4 rounded-2xl shadow-sm transition flex items-center justify-center gap-2 text-sm">
           <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
@@ -331,12 +410,6 @@
   </main>
 
   <script>
-    // תמונות מובנות ישירות מהקבצים שהעלית
-    document.getElementById('img-box').src = "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=120&auto=format&fit=crop&q=80";
-    document.getElementById('img-case').src = "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=120&auto=format&fit=crop&q=80";
-    document.getElementById('img-rings').src = "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=120&auto=format&fit=crop&q=80";
-    document.getElementById('img-aravot').src = "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=120&auto=format&fit=crop&q=80";
-
     const items = {
       sets: {
         basic: { name: 'סט כשר בסיסי', price: 85, count: 0 },
@@ -344,7 +417,7 @@
         premium: { name: 'סט פרימיום', price: 270, count: 0 }
       },
       addons: {
-        box: { name: 'קופסה מפוארת לאתרוג', price: 35, count: 0 },
+        box: { name: 'קופסה מהודרת לאתרוג', price: 35, count: 0 },
         case: { name: 'נרתיק מרופד ללולב', price: 25, count: 0 },
         aravot: { name: 'ערבות לבלוב (חזון איש)', price: 15, count: 0 },
         rings: { name: 'מארז טבעות לקשירה', price: 10, count: 0 }
