@@ -13,83 +13,102 @@
     .price-tag { font-variant-numeric: tabular-nums; }
   </style>
 </head>
-<body class="bg-[#fdf4f5] text-stone-800 min-h-screen pb-16">
+<body class="bg-[#f4faf5] text-stone-800 min-h-screen pb-16">
 
   <!-- מספר וואטסאפ מוגדר -->
   <script>
     const MY_WHATSAPP_PHONE = "972539621454";
   </script>
 
-  <!-- באנר עליון עם איור מדויק אחד-לאחד של תמונת ארבעת המינים ברקע וגוון ורדרד נעים -->
-  <header class="relative bg-gradient-to-b from-[#4a2430] via-[#613342] to-[#fdf4f5] text-white pt-12 pb-16 px-4 shadow-sm overflow-hidden text-center">
-    <!-- רקע דקורטיבי עדין -->
+  <!-- באנר עליון עם איור עשיר של ארבעת המינים בגוון ירוק-יער עמוק עם פסטל -->
+  <header class="relative bg-gradient-to-b from-[#1b3d2b] via-[#2d573e] to-[#f4faf5] text-white pt-12 pb-16 px-4 shadow-sm overflow-hidden text-center">
     <div class="max-w-2xl mx-auto relative z-10 space-y-4">
       
-      <!-- ציור מדויק של ארבעת המינים מהתמונה שלך -->
-      <div class="w-28 h-36 mx-auto bg-white/10 backdrop-blur-md rounded-3xl p-2 border border-rose-300/30 shadow-lg flex items-center justify-center">
+      <!-- איור מרכזי מדויק של ארבעת המינים -->
+      <div class="w-32 h-40 mx-auto bg-white/10 backdrop-blur-md rounded-3xl p-2 border border-emerald-300/30 shadow-lg flex items-center justify-center">
         <svg viewBox="0 0 160 220" class="w-full h-full drop-shadow-md">
-          <!-- לולב ירוק גבוה וסגור -->
-          <line x1="75" y1="210" x2="75" y2="10" stroke="#2e7d32" stroke-width="6" stroke-linecap="round"/>
-          <line x1="75" y1="10" x2="72" y2="210" stroke="#1b5e20" stroke-width="2"/>
-          
-          <!-- ערבות משמאל עם עלים ארוכים ודקים בצבע ירוק-זית בהיר -->
-          <path d="M70 190 Q35 120 40 40 Q55 100 70 180" fill="#689f38" opacity="0.9"/>
-          <path d="M68 180 Q20 130 15 65 Q40 115 68 175" fill="#7cb342" opacity="0.9"/>
-          <path d="M72 170 Q45 80 50 15 Q62 75 72 165" fill="#558b2f" opacity="0.9"/>
+          <!-- לולב ישר במרכז -->
+          <line x1="80" y1="210" x2="80" y2="8" stroke="#256e29" stroke-width="7" stroke-linecap="round"/>
+          <line x1="79" y1="8" x2="79" y2="210" stroke="#184e1b" stroke-width="2"/>
 
-          <!-- שני ענפי הדס משולש צפופים מימין עם עלים מסודרים בשלשות -->
-          <!-- ענף הדס 1 -->
-          <line x1="95" y1="200" x2="100" y2="40" stroke="#2e5a27" stroke-width="3"/>
-          <g fill="#1b5e20">
-            <ellipse cx="94" cy="50" rx="6" ry="11" transform="rotate(25 94 50)"/>
-            <ellipse cx="106" cy="50" rx="6" ry="11" transform="rotate(-25 106 50)"/>
-            <ellipse cx="100" cy="45" rx="5" ry="10"/>
+          <!-- ערבות משמאל: ענף חום-אדמדם עם עלים ארוכים, צרים ומחודדים -->
+          <!-- ענף ערבה 1 -->
+          <path d="M72 195 Q52 130 45 40" stroke="#8d5b4c" stroke-width="2.5" fill="none"/>
+          <path d="M45 40 C35 55 35 75 48 90" fill="#7cb342" stroke="#689f38" stroke-width="0.8"/>
+          <path d="M49 85 C30 100 28 125 55 135" fill="#8bc34a" stroke="#689f38" stroke-width="0.8"/>
+          <path d="M56 130 C32 145 35 168 62 172" fill="#7cb342" stroke="#689f38" stroke-width="0.8"/>
 
-            <ellipse cx="93" cy="75" rx="7" ry="12" transform="rotate(25 93 75)"/>
-            <ellipse cx="107" cy="75" rx="7" ry="12" transform="rotate(-25 107 75)"/>
-            <ellipse cx="100" cy="70" rx="6" ry="11"/>
+          <!-- ענף ערבה 2 (גבוה משמאל) -->
+          <path d="M76 195 Q60 110 58 15" stroke="#795548" stroke-width="2" fill="none"/>
+          <path d="M58 15 C50 30 52 48 62 60" fill="#8bc34a" stroke="#689f38" stroke-width="0.8"/>
+          <path d="M62 60 C48 78 50 102 66 112" fill="#7cb342" stroke="#689f38" stroke-width="0.8"/>
+          <path d="M66 110 C52 130 55 152 70 160" fill="#8bc34a" stroke="#689f38" stroke-width="0.8"/>
 
-            <ellipse cx="92" cy="100" rx="8" ry="13" transform="rotate(25 92 100)"/>
-            <ellipse cx="108" cy="100" rx="8" ry="13" transform="rotate(-25 108 100)"/>
-            <ellipse cx="100" cy="95" rx="7" ry="12"/>
+          <!-- הדסים מימין: שני ענפים עציים עם עלים קטנים בשלשות (משולש) -->
+          <!-- ענף הדס 1 (ימני חיצוני) -->
+          <line x1="108" y1="195" x2="115" y2="45" stroke="#4e342e" stroke-width="2.5"/>
+          <!-- שלשות עלים קטנים וצפופים לאורך הענף -->
+          <g fill="#1b5e20" stroke="#0d3b11" stroke-width="0.7">
+            <!-- קומה 1 עליונה -->
+            <path d="M115 45 C111 40 107 43 111 50 Z"/>
+            <path d="M115 45 C119 40 123 43 119 50 Z"/>
+            <path d="M115 45 C115 39 116 39 115 49 Z"/>
 
-            <ellipse cx="90" cy="125" rx="8" ry="14" transform="rotate(25 90 125)"/>
-            <ellipse cx="110" cy="125" rx="8" ry="14" transform="rotate(-25 110 125)"/>
-            <ellipse cx="100" cy="120" rx="7" ry="13"/>
+            <!-- קומה 2 -->
+            <path d="M114 62 C108 57 104 61 109 69 Z"/>
+            <path d="M114 62 C120 57 124 61 119 69 Z"/>
+            <path d="M114 62 C114 55 115 55 114 68 Z"/>
+
+            <!-- קומה 3 -->
+            <path d="M113 80 C106 74 102 79 107 88 Z"/>
+            <path d="M113 80 C120 74 124 79 119 88 Z"/>
+            <path d="M113 80 C113 72 114 72 113 87 Z"/>
+
+            <!-- קומה 4 -->
+            <path d="M111 100 C103 93 99 99 105 109 Z"/>
+            <path d="M111 100 C119 93 123 99 117 109 Z"/>
+            <path d="M111 100 C111 91 112 91 111 108 Z"/>
+
+            <!-- קומה 5 -->
+            <path d="M110 122 C101 114 97 121 103 132 Z"/>
+            <path d="M110 122 C119 114 123 121 117 132 Z"/>
+            <path d="M110 122 C110 112 111 112 110 131 Z"/>
           </g>
 
-          <!-- ענף הדס 2 צמוד -->
-          <g fill="#2e7d32">
-            <ellipse cx="80" cy="80" rx="5" ry="9" transform="rotate(20 80 80)"/>
-            <ellipse cx="88" cy="80" rx="5" ry="9" transform="rotate(-20 88 80)"/>
-            <ellipse cx="84" cy="75" rx="5" ry="9"/>
-            <ellipse cx="79" cy="100" rx="6" ry="10" transform="rotate(20 79 100)"/>
-            <ellipse cx="89" cy="100" rx="6" ry="10" transform="rotate(-20 89 100)"/>
+          <!-- ענף הדס 2 (פנימי קרוב ללולב) -->
+          <line x1="94" y1="195" x2="96" y2="70" stroke="#4e342e" stroke-width="2"/>
+          <g fill="#2e7d32" stroke="#1b5e20" stroke-width="0.7">
+            <path d="M96 72 C91 66 87 70 92 78 Z"/>
+            <path d="M96 72 C101 66 105 70 100 78 Z"/>
+            <path d="M95 90 C89 83 85 88 91 97 Z"/>
+            <path d="M95 90 C101 83 105 88 99 97 Z"/>
+            <path d="M94 110 C87 102 83 108 90 118 Z"/>
+            <path d="M94 110 C101 102 105 108 98 118 Z"/>
           </g>
 
-          <!-- אתרוג צהוב בוהק במרכז עם צורה אגסית, חוטם ופיטם בולט בקצה -->
+          <!-- אתרוג במרכז: צהוב עשיר, צורה אגסית מדויקת, חוטם ופיטם -->
           <g>
-            <!-- גוף האתרוג -->
-            <path d="M75 115 C77 122 84 135 93 148 C104 165 102 188 88 200 C74 212 55 208 48 192 C42 178 45 160 55 145 C65 130 73 122 75 115 Z" 
-                  fill="#ffd500" stroke="#fbc02d" stroke-width="1.5"/>
-            <!-- מרקם וצל לאתרוג -->
-            <path d="M50 185 C46 172 48 158 57 146 C64 135 72 125 75 118" stroke="#ffe082" stroke-width="2" fill="none"/>
-            <circle cx="68" cy="165" r="1" fill="#f57f17"/>
-            <circle cx="75" cy="155" r="1.2" fill="#f57f17"/>
-            <circle cx="82" cy="170" r="1" fill="#f57f17"/>
-            <circle cx="62" cy="180" r="1.2" fill="#f57f17"/>
-            <!-- פיטם שחום בקצה -->
-            <circle cx="75" cy="113" r="2.5" fill="#5d4037"/>
-            <line x1="75" y1="113" x2="75" y2="108" stroke="#4e342e" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M80 118 C83 126 90 138 98 152 C108 168 106 190 92 201 C78 212 58 208 51 192 C45 178 48 160 58 145 C67 131 77 125 80 118 Z" 
+                  fill="#ffd600" stroke="#e6b800" stroke-width="1.8"/>
+            <!-- מרקם גבשושי וצל טבעי -->
+            <path d="M53 186 C49 174 51 159 60 147 C67 136 75 127 79 120" stroke="#fff9c4" stroke-width="2.5" fill="none"/>
+            <circle cx="72" cy="168" r="1.2" fill="#f57f17"/>
+            <circle cx="80" cy="158" r="1.4" fill="#f57f17"/>
+            <circle cx="88" cy="172" r="1.2" fill="#f57f17"/>
+            <circle cx="66" cy="182" r="1.4" fill="#f57f17"/>
+            <circle cx="82" cy="190" r="1.2" fill="#f57f17"/>
+            <!-- פיטם שחום עם עוקץ קטן -->
+            <circle cx="80" cy="116" r="2.8" fill="#4e342e"/>
+            <line x1="80" y1="116" x2="80" y2="110" stroke="#3e2723" stroke-width="2" stroke-linecap="round"/>
           </g>
         </svg>
       </div>
 
-      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-rose-200/20 backdrop-blur-md text-rose-100 text-xs font-medium border border-rose-200/30">
-        <span>🌸</span> חג הסוכות • כשרות מהודרת ומפוקחת
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-800/40 backdrop-blur-md text-emerald-100 text-xs font-medium border border-emerald-300/30">
+        <span>🌿</span> חג הסוכות • כשרות מהודרת ומפוקחת
       </div>
       <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow-sm">ארבעת המינים למהדרין</h1>
-      <p class="text-rose-100/90 text-xs md:text-sm max-w-md mx-auto font-normal">
+      <p class="text-emerald-100/90 text-xs md:text-sm max-w-md mx-auto font-normal">
         בחרו את הסט והאביזרים הרצויים ושלחו את ההזמנה ישירות לוואטסאפ
       </p>
     </div>
@@ -102,36 +121,41 @@
     <div class="lg:col-span-8 space-y-6">
 
       <!-- שלב 1: בחירת סטים -->
-      <section class="bg-white rounded-3xl p-6 shadow-xs border border-rose-100">
-        <div class="flex items-center justify-between pb-4 mb-5 border-b border-rose-50">
+      <section class="bg-white rounded-3xl p-6 shadow-xs border border-emerald-100/80">
+        <div class="flex items-center justify-between pb-4 mb-5 border-b border-emerald-50">
           <div class="flex items-center gap-3">
-            <span class="w-8 h-8 rounded-full bg-rose-500 text-white font-bold text-sm flex items-center justify-center shadow-xs">1</span>
+            <span class="w-8 h-8 rounded-full bg-emerald-700 text-white font-bold text-sm flex items-center justify-center shadow-xs">1</span>
             <div>
               <h2 class="text-lg font-bold text-stone-800">בחירת סט לפי רמת הידור</h2>
-              <p class="text-xs text-stone-400">כולל: אתרוג, לולב, 3 הדסים ו-2 ערבות</p>
+              <p class="text-xs text-stone-400">כולל: אתרוג, לולב, 3 הדסים משולשים ו-2 ערבות</p>
             </div>
           </div>
-          <span class="text-xs bg-rose-50 text-rose-700 font-semibold px-3 py-1 rounded-full border border-rose-200/60">סטים מלאים</span>
+          <span class="text-xs bg-emerald-50 text-emerald-800 font-semibold px-3 py-1 rounded-full border border-emerald-200/60">סטים מלאים</span>
         </div>
 
         <div class="space-y-3.5">
           <!-- סט כשר בסיסי -->
-          <div class="p-3.5 rounded-2xl border border-rose-100 bg-[#fffafb] flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition hover:border-rose-300">
+          <div class="p-3.5 rounded-2xl border border-emerald-100 bg-[#fbfdfb] flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition hover:border-emerald-300">
             <div class="flex items-center gap-3">
-              <!-- תמונת הסט שלך -->
-              <div class="w-14 h-14 rounded-2xl bg-white border border-rose-200 p-1 flex items-center justify-center shrink-0 shadow-2xs">
+              <!-- תמונת סט ארבעת המינים המדויקת -->
+              <div class="w-14 h-14 rounded-2xl bg-white border border-emerald-200 p-1 flex items-center justify-center shrink-0 shadow-2xs">
                 <svg viewBox="0 0 160 220" class="w-full h-full">
-                  <line x1="75" y1="210" x2="75" y2="10" stroke="#2e7d32" stroke-width="7" stroke-linecap="round"/>
-                  <path d="M70 190 Q35 120 40 40 Q55 100 70 180" fill="#689f38"/>
-                  <path d="M68 180 Q20 130 15 65 Q40 115 68 175" fill="#7cb342"/>
+                  <line x1="80" y1="210" x2="80" y2="8" stroke="#256e29" stroke-width="7" stroke-linecap="round"/>
+                  <path d="M72 195 Q52 130 45 40" stroke="#8d5b4c" stroke-width="2.5" fill="none"/>
+                  <path d="M45 40 C35 55 35 75 48 90" fill="#7cb342"/>
+                  <path d="M49 85 C30 100 28 125 55 135" fill="#8bc34a"/>
+                  <line x1="108" y1="195" x2="115" y2="45" stroke="#4e342e" stroke-width="2.5"/>
                   <g fill="#1b5e20">
-                    <ellipse cx="94" cy="60" rx="7" ry="12" transform="rotate(25 94 60)"/>
-                    <ellipse cx="106" cy="60" rx="7" ry="12" transform="rotate(-25 106 60)"/>
-                    <ellipse cx="93" cy="90" rx="8" ry="13" transform="rotate(25 93 90)"/>
-                    <ellipse cx="107" cy="90" rx="8" ry="13" transform="rotate(-25 107 90)"/>
+                    <path d="M115 45 C111 40 107 43 111 50 Z"/>
+                    <path d="M115 45 C119 40 123 43 119 50 Z"/>
+                    <path d="M114 65 C108 60 104 64 109 72 Z"/>
+                    <path d="M114 65 C120 60 124 64 119 72 Z"/>
+                    <path d="M112 88 C105 82 101 87 106 96 Z"/>
+                    <path d="M112 88 C119 82 123 87 118 96 Z"/>
                   </g>
-                  <path d="M75 115 C77 122 84 135 93 148 C104 165 102 188 88 200 C74 212 55 208 48 192 C42 178 45 160 55 145 C65 130 73 122 75 115 Z" fill="#ffd500" stroke="#fbc02d" stroke-width="2"/>
-                  <circle cx="75" cy="113" r="2.5" fill="#5d4037"/>
+                  <path d="M80 118 C83 126 90 138 98 152 C108 168 106 190 92 201 C78 212 58 208 51 192 C45 178 48 160 58 145 C67 131 77 125 80 118 Z" fill="#ffd600" stroke="#e6b800" stroke-width="1.8"/>
+                  <circle cx="80" cy="116" r="2.8" fill="#4e342e"/>
+                  <line x1="80" y1="116" x2="80" y2="110" stroke="#3e2723" stroke-width="2" stroke-linecap="round"/>
                 </svg>
               </div>
               <div>
@@ -140,71 +164,79 @@
                   <span class="text-[10px] bg-stone-200/70 text-stone-700 font-medium px-2 py-0.5 rounded-md">כשר לברכה</span>
                 </div>
                 <p class="text-xs text-stone-500 mt-0.5">כשר כהלכתו, נבדק ע"י רבנים, מתאים למשפחות וילדים.</p>
-                <div class="text-rose-600 font-bold text-base price-tag mt-0.5">₪85 <span class="text-xs font-normal text-stone-400">/ יח'</span></div>
+                <div class="text-emerald-700 font-bold text-base price-tag mt-0.5">₪85 <span class="text-xs font-normal text-stone-400">/ יח'</span></div>
               </div>
             </div>
-            <div class="flex items-center gap-2 self-end sm:self-center bg-white px-2 py-1 rounded-xl border border-rose-200">
+            <div class="flex items-center gap-2 self-end sm:self-center bg-white px-2 py-1 rounded-xl border border-emerald-200">
               <button onclick="updateQty('set', 'basic', -1)" class="w-7 h-7 rounded-lg bg-stone-100 hover:bg-stone-200 font-bold text-stone-600 transition">−</button>
               <span id="qty-set-basic" class="w-7 text-center font-bold text-sm">0</span>
-              <button onclick="updateQty('set', 'basic', 1)" class="w-7 h-7 rounded-lg bg-rose-500 hover:bg-rose-600 text-white font-bold transition">+</button>
+              <button onclick="updateQty('set', 'basic', 1)" class="w-7 h-7 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white font-bold transition">+</button>
             </div>
           </div>
 
           <!-- סט מהודר -->
-          <div class="p-3.5 rounded-2xl border-2 border-rose-400 bg-rose-50/40 relative flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-2xs">
-            <span class="absolute -top-2.5 left-5 bg-rose-500 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-2xs">
+          <div class="p-3.5 rounded-2xl border-2 border-emerald-500 bg-emerald-50/40 relative flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-2xs">
+            <span class="absolute -top-2.5 left-5 bg-emerald-700 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-2xs">
               הכי מבוקש ✨
             </span>
             <div class="flex items-center gap-3">
-              <!-- תמונת הסט שלך -->
-              <div class="w-14 h-14 rounded-2xl bg-white border border-rose-300 p-1 flex items-center justify-center shrink-0 shadow-2xs">
+              <div class="w-14 h-14 rounded-2xl bg-white border border-emerald-300 p-1 flex items-center justify-center shrink-0 shadow-2xs">
                 <svg viewBox="0 0 160 220" class="w-full h-full">
-                  <line x1="75" y1="210" x2="75" y2="10" stroke="#2e7d32" stroke-width="7" stroke-linecap="round"/>
-                  <path d="M70 190 Q35 120 40 40 Q55 100 70 180" fill="#689f38"/>
-                  <path d="M68 180 Q20 130 15 65 Q40 115 68 175" fill="#7cb342"/>
+                  <line x1="80" y1="210" x2="80" y2="8" stroke="#256e29" stroke-width="7" stroke-linecap="round"/>
+                  <path d="M72 195 Q52 130 45 40" stroke="#8d5b4c" stroke-width="2.5" fill="none"/>
+                  <path d="M45 40 C35 55 35 75 48 90" fill="#7cb342"/>
+                  <path d="M49 85 C30 100 28 125 55 135" fill="#8bc34a"/>
+                  <line x1="108" y1="195" x2="115" y2="45" stroke="#4e342e" stroke-width="2.5"/>
                   <g fill="#1b5e20">
-                    <ellipse cx="94" cy="60" rx="7" ry="12" transform="rotate(25 94 60)"/>
-                    <ellipse cx="106" cy="60" rx="7" ry="12" transform="rotate(-25 106 60)"/>
-                    <ellipse cx="93" cy="90" rx="8" ry="13" transform="rotate(25 93 90)"/>
-                    <ellipse cx="107" cy="90" rx="8" ry="13" transform="rotate(-25 107 90)"/>
+                    <path d="M115 45 C111 40 107 43 111 50 Z"/>
+                    <path d="M115 45 C119 40 123 43 119 50 Z"/>
+                    <path d="M114 65 C108 60 104 64 109 72 Z"/>
+                    <path d="M114 65 C120 60 124 64 119 72 Z"/>
+                    <path d="M112 88 C105 82 101 87 106 96 Z"/>
+                    <path d="M112 88 C119 82 123 87 118 96 Z"/>
                   </g>
-                  <path d="M75 115 C77 122 84 135 93 148 C104 165 102 188 88 200 C74 212 55 208 48 192 C42 178 45 160 55 145 C65 130 73 122 75 115 Z" fill="#ffd500" stroke="#fbc02d" stroke-width="2"/>
-                  <circle cx="75" cy="113" r="2.5" fill="#5d4037"/>
+                  <path d="M80 118 C83 126 90 138 98 152 C108 168 106 190 92 201 C78 212 58 208 51 192 C45 178 48 160 58 145 C67 131 77 125 80 118 Z" fill="#ffd600" stroke="#e6b800" stroke-width="1.8"/>
+                  <circle cx="80" cy="116" r="2.8" fill="#4e342e"/>
+                  <line x1="80" y1="116" x2="80" y2="110" stroke="#3e2723" stroke-width="2" stroke-linecap="round"/>
                 </svg>
               </div>
               <div>
                 <div class="flex items-center gap-2">
                   <span class="font-bold text-stone-900 text-sm">סט מהודר</span>
-                  <span class="text-[10px] bg-rose-500 text-white font-bold px-2 py-0.5 rounded-md">מומלץ</span>
+                  <span class="text-[10px] bg-emerald-700 text-white font-bold px-2 py-0.5 rounded-md">מומלץ</span>
                 </div>
                 <p class="text-xs text-stone-500 mt-0.5">אתרוג מובחר ונקי, לולב סגור וישר, הדסים משולשים.</p>
-                <div class="text-rose-700 font-extrabold text-base price-tag mt-0.5">₪160 <span class="text-xs font-normal text-stone-400">/ יח'</span></div>
+                <div class="text-emerald-800 font-extrabold text-base price-tag mt-0.5">₪160 <span class="text-xs font-normal text-stone-400">/ יח'</span></div>
               </div>
             </div>
-            <div class="flex items-center gap-2 self-end sm:self-center bg-white px-2 py-1 rounded-xl border border-rose-300">
+            <div class="flex items-center gap-2 self-end sm:self-center bg-white px-2 py-1 rounded-xl border border-emerald-300">
               <button onclick="updateQty('set', 'mehudar', -1)" class="w-7 h-7 rounded-lg bg-stone-100 hover:bg-stone-200 font-bold text-stone-600 transition">−</button>
               <span id="qty-set-mehudar" class="w-7 text-center font-bold text-sm">0</span>
-              <button onclick="updateQty('set', 'mehudar', 1)" class="w-7 h-7 rounded-lg bg-rose-500 hover:bg-rose-600 text-white font-bold transition">+</button>
+              <button onclick="updateQty('set', 'mehudar', 1)" class="w-7 h-7 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white font-bold transition">+</button>
             </div>
           </div>
 
           <!-- סט פרימיום -->
           <div class="p-3.5 rounded-2xl border border-amber-200 bg-[#fffdf8] flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition hover:border-amber-300">
             <div class="flex items-center gap-3">
-              <!-- תמונת הסט שלך -->
               <div class="w-14 h-14 rounded-2xl bg-white border border-amber-300 p-1 flex items-center justify-center shrink-0 shadow-2xs">
                 <svg viewBox="0 0 160 220" class="w-full h-full">
-                  <line x1="75" y1="210" x2="75" y2="10" stroke="#2e7d32" stroke-width="7" stroke-linecap="round"/>
-                  <path d="M70 190 Q35 120 40 40 Q55 100 70 180" fill="#689f38"/>
-                  <path d="M68 180 Q20 130 15 65 Q40 115 68 175" fill="#7cb342"/>
+                  <line x1="80" y1="210" x2="80" y2="8" stroke="#256e29" stroke-width="7" stroke-linecap="round"/>
+                  <path d="M72 195 Q52 130 45 40" stroke="#8d5b4c" stroke-width="2.5" fill="none"/>
+                  <path d="M45 40 C35 55 35 75 48 90" fill="#7cb342"/>
+                  <path d="M49 85 C30 100 28 125 55 135" fill="#8bc34a"/>
+                  <line x1="108" y1="195" x2="115" y2="45" stroke="#4e342e" stroke-width="2.5"/>
                   <g fill="#1b5e20">
-                    <ellipse cx="94" cy="60" rx="7" ry="12" transform="rotate(25 94 60)"/>
-                    <ellipse cx="106" cy="60" rx="7" ry="12" transform="rotate(-25 106 60)"/>
-                    <ellipse cx="93" cy="90" rx="8" ry="13" transform="rotate(25 93 90)"/>
-                    <ellipse cx="107" cy="90" rx="8" ry="13" transform="rotate(-25 107 90)"/>
+                    <path d="M115 45 C111 40 107 43 111 50 Z"/>
+                    <path d="M115 45 C119 40 123 43 119 50 Z"/>
+                    <path d="M114 65 C108 60 104 64 109 72 Z"/>
+                    <path d="M114 65 C120 60 124 64 119 72 Z"/>
+                    <path d="M112 88 C105 82 101 87 106 96 Z"/>
+                    <path d="M112 88 C119 82 123 87 118 96 Z"/>
                   </g>
-                  <path d="M75 115 C77 122 84 135 93 148 C104 165 102 188 88 200 C74 212 55 208 48 192 C42 178 45 160 55 145 C65 130 73 122 75 115 Z" fill="#ffd500" stroke="#fbc02d" stroke-width="2"/>
-                  <circle cx="75" cy="113" r="2.5" fill="#5d4037"/>
+                  <path d="M80 118 C83 126 90 138 98 152 C108 168 106 190 92 201 C78 212 58 208 51 192 C45 178 48 160 58 145 C67 131 77 125 80 118 Z" fill="#ffd600" stroke="#e6b800" stroke-width="1.8"/>
+                  <circle cx="80" cy="116" r="2.8" fill="#4e342e"/>
+                  <line x1="80" y1="116" x2="80" y2="110" stroke="#3e2723" stroke-width="2" stroke-linecap="round"/>
                 </svg>
               </div>
               <div>
@@ -225,10 +257,10 @@
         </div>
 
         <!-- בחירת מנהג ופיטם -->
-        <div class="mt-4 pt-3 border-t border-rose-100 grid grid-cols-1 sm:grid-cols-2 gap-3 bg-[#fff8f9] p-3 rounded-2xl">
+        <div class="mt-4 pt-3 border-t border-emerald-100 grid grid-cols-1 sm:grid-cols-2 gap-3 bg-[#eef7f0]/60 p-3 rounded-2xl">
           <div>
             <label class="block text-xs font-semibold text-stone-700 mb-1">נוסח / מנהג:</label>
-            <select id="nusachInput" class="w-full text-xs p-2.5 rounded-xl border border-rose-200 bg-white focus:outline-rose-400">
+            <select id="nusachInput" class="w-full text-xs p-2.5 rounded-xl border border-emerald-200 bg-white focus:outline-emerald-500">
               <option value="אשכנז / כללי">אשכנז / כללי</option>
               <option value="ספרדי / עדות המזרח">ספרדי / עדות המזרח</option>
               <option value="חזון איש">חזון איש</option>
@@ -238,7 +270,7 @@
           </div>
           <div>
             <label class="block text-xs font-semibold text-stone-700 mb-1">העדפת פיטם:</label>
-            <select id="pitamInput" class="w-full text-xs p-2.5 rounded-xl border border-rose-200 bg-white focus:outline-rose-400">
+            <select id="pitamInput" class="w-full text-xs p-2.5 rounded-xl border border-emerald-200 bg-white focus:outline-emerald-500">
               <option value="לפי הזמינות הטובה">לפי הזמינות הטובה</option>
               <option value="עם פיטם שלם">עם פיטם שלם</option>
               <option value="ללא פיטם (נשר בגידול)">ללא פיטם (נשר בגידול)</option>
@@ -248,9 +280,9 @@
       </section>
 
       <!-- שלב 2: תוספות עם התמונות המדויקות שלך -->
-      <section class="bg-white rounded-3xl p-6 shadow-xs border border-rose-100">
-        <div class="flex items-center gap-3 pb-4 mb-4 border-b border-rose-50">
-          <span class="w-8 h-8 rounded-full bg-rose-500 text-white font-bold text-sm flex items-center justify-center shadow-xs">2</span>
+      <section class="bg-white rounded-3xl p-6 shadow-xs border border-emerald-100/80">
+        <div class="flex items-center gap-3 pb-4 mb-4 border-b border-emerald-50">
+          <span class="w-8 h-8 rounded-full bg-emerald-700 text-white font-bold text-sm flex items-center justify-center shadow-xs">2</span>
           <div>
             <h2 class="text-lg font-bold text-stone-800">אביזרים ושדרוגים</h2>
             <p class="text-xs text-stone-400">שמירה על הסטים ונוחות נשיאה לחג</p>
@@ -259,50 +291,41 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           
-          <!-- 1. קופסה שחורה לאתרוג (מדויק לתמונה שלך: קופסה שחורה דמוי עור, ידית עליונה, כיתוב 'אתרוג' ועיטור עלה זהב) -->
-          <div class="p-3 rounded-2xl border border-rose-100 bg-[#fffafb] flex items-center justify-between">
+          <!-- 1. קופסה שחורה לאתרוג -->
+          <div class="p-3 rounded-2xl border border-emerald-100 bg-[#fbfdfb] flex items-center justify-between">
             <div class="flex items-center gap-2.5">
               <div class="w-14 h-14 rounded-2xl bg-[#1c1c1e] border border-stone-700 p-1 flex items-center justify-center shrink-0 shadow-2xs">
                 <svg viewBox="0 0 100 80" class="w-full h-full">
-                  <!-- ידית שחורה -->
                   <path d="M35 22 C35 10 65 10 65 22" stroke="#444" stroke-width="4" fill="none" stroke-linecap="round"/>
-                  <!-- גוף הקופסה בפרספקטיבה עדינה -->
                   <rect x="10" y="22" width="80" height="50" rx="5" fill="#18181a" stroke="#333" stroke-width="1.5"/>
-                  <!-- כיתוב 'אתרוג' בסגנון אותיות זהב מחוברות מימין -->
                   <text x="75" y="42" font-size="14" fill="#dfb36c" font-family="serif" font-weight="bold" text-anchor="end">אתרוג</text>
-                  <!-- עיטור עלה חום-זהב בתחתית -->
                   <path d="M12 65 Q45 42 88 62" stroke="#dfb36c" stroke-width="3" fill="none"/>
                   <path d="M35 55 Q55 45 70 58 Q48 65 35 55" fill="#8c6239" stroke="#dfb36c" stroke-width="1"/>
                 </svg>
               </div>
               <div>
                 <div class="font-bold text-xs text-stone-800">קופסה מפוארת לאתרוג</div>
-                <div class="text-rose-600 font-bold text-xs">₪35</div>
+                <div class="text-emerald-700 font-bold text-xs">₪35</div>
               </div>
             </div>
-            <div class="flex items-center gap-1 bg-white p-1 rounded-xl border border-rose-200">
+            <div class="flex items-center gap-1 bg-white p-1 rounded-xl border border-emerald-200">
               <button onclick="updateQty('addon', 'box', -1)" class="w-6 h-6 rounded-lg bg-stone-100 font-bold text-xs">−</button>
               <span id="qty-addon-box" class="w-5 text-center font-bold text-xs">0</span>
-              <button onclick="updateQty('addon', 'box', 1)" class="w-6 h-6 rounded-lg bg-rose-500 text-white font-bold text-xs">+</button>
+              <button onclick="updateQty('addon', 'box', 1)" class="w-6 h-6 rounded-lg bg-emerald-700 text-white font-bold text-xs">+</button>
             </div>
           </div>
 
-          <!-- 2. נרתיק ללולב (מדויק לתמונה שלך: נרתיק אלכסוני כחול-כהה/שחור קרוקו, 2 פסי גל לבנים, כיתוב 'לולב' וידית) -->
-          <div class="p-3 rounded-2xl border border-rose-100 bg-[#fffafb] flex items-center justify-between">
+          <!-- 2. נרתיק ללולב -->
+          <div class="p-3 rounded-2xl border border-emerald-100 bg-[#fbfdfb] flex items-center justify-between">
             <div class="flex items-center gap-2.5">
-              <div class="w-14 h-14 rounded-2xl bg-white border border-rose-200 p-1 flex items-center justify-center shrink-0 shadow-2xs">
+              <div class="w-14 h-14 rounded-2xl bg-white border border-emerald-200 p-1 flex items-center justify-center shrink-0 shadow-2xs">
                 <svg viewBox="0 0 100 100" class="w-full h-full">
                   <g transform="rotate(-40 50 50)">
-                    <!-- גוף הנרתיק -->
                     <rect x="38" y="0" width="24" height="100" rx="6" fill="#1b2838" stroke="#111c27" stroke-width="1.5"/>
-                    <!-- ידית נשיאה בצד -->
                     <path d="M38 42 C28 42 28 58 38 58" stroke="#1b2838" stroke-width="3.5" fill="none"/>
-                    <!-- פסי גל לבנים עליונים -->
                     <path d="M38 18 Q44 12 50 18 T62 18" stroke="#ffffff" stroke-width="2.2" fill="none"/>
                     <path d="M38 24 Q44 18 50 24 T62 24" stroke="#ffffff" stroke-width="2.2" fill="none"/>
-                    <!-- כיתוב מוטבע 'לולב' במרכז -->
                     <text x="50" y="52" font-size="7" fill="#8baac9" font-weight="bold" text-anchor="middle" transform="rotate(90 50 52)">לולב</text>
-                    <!-- פסי גל לבנים תחתונים -->
                     <path d="M38 78 Q44 72 50 78 T62 78" stroke="#ffffff" stroke-width="2.2" fill="none"/>
                     <path d="M38 84 Q44 78 50 84 T62 84" stroke="#ffffff" stroke-width="2.2" fill="none"/>
                   </g>
@@ -310,28 +333,25 @@
               </div>
               <div>
                 <div class="font-bold text-xs text-stone-800">נרתיק מרופד ללולב</div>
-                <div class="text-rose-600 font-bold text-xs">₪25</div>
+                <div class="text-emerald-700 font-bold text-xs">₪25</div>
               </div>
             </div>
-            <div class="flex items-center gap-1 bg-white p-1 rounded-xl border border-rose-200">
+            <div class="flex items-center gap-1 bg-white p-1 rounded-xl border border-emerald-200">
               <button onclick="updateQty('addon', 'case', -1)" class="w-6 h-6 rounded-lg bg-stone-100 font-bold text-xs">−</button>
               <span id="qty-addon-case" class="w-5 text-center font-bold text-xs">0</span>
-              <button onclick="updateQty('addon', 'case', 1)" class="w-6 h-6 rounded-lg bg-rose-500 text-white font-bold text-xs">+</button>
+              <button onclick="updateQty('addon', 'case', 1)" class="w-6 h-6 rounded-lg bg-emerald-700 text-white font-bold text-xs">+</button>
             </div>
           </div>
 
-          <!-- 3. ערבות לבלוב (מדויק לתמונה שלך: מארז שקית ארוכה עם עלים ירוקים, כיתוב 'ערבות חזון איש' באדום ומסגרת ירוקה) -->
-          <div class="p-3 rounded-2xl border border-rose-100 bg-[#fffafb] flex items-center justify-between">
+          <!-- 3. ערבות לבלוב -->
+          <div class="p-3 rounded-2xl border border-emerald-100 bg-[#fbfdfb] flex items-center justify-between">
             <div class="flex items-center gap-2.5">
-              <div class="w-14 h-14 rounded-2xl bg-white border border-rose-200 p-1 flex items-center justify-center shrink-0 shadow-2xs">
+              <div class="w-14 h-14 rounded-2xl bg-white border border-emerald-200 p-1 flex items-center justify-center shrink-0 shadow-2xs">
                 <svg viewBox="0 0 70 100" class="w-full h-full">
-                  <!-- שקית ואקום שקופה/לבנה -->
                   <rect x="10" y="5" width="50" height="90" rx="3" fill="#fafafa" stroke="#4caf50" stroke-width="1.8"/>
-                  <!-- ענפי ערבה ירוקים בפנים -->
                   <path d="M22 92 L22 15" stroke="#7cb342" stroke-width="2.5"/>
                   <path d="M48 92 L48 15" stroke="#558b2f" stroke-width="2.5"/>
                   <path d="M35 92 L35 10" stroke="#33691e" stroke-width="3"/>
-                  <!-- עטיפה מודפסת עם כיתוב אדום ומסגרת ירוקה בדיוק כמו בתמונה -->
                   <rect x="14" y="16" width="42" height="30" fill="#ffffff" stroke="#2e7d32" stroke-width="1" rx="1"/>
                   <text x="35" y="27" font-size="7" fill="#b71c1c" font-weight="extrabold" text-anchor="middle">ערבות</text>
                   <text x="35" y="37" font-size="6" fill="#b71c1c" font-weight="bold" text-anchor="middle">חזון איש</text>
@@ -340,22 +360,21 @@
               </div>
               <div>
                 <div class="font-bold text-xs text-stone-800">ערבות לבלוב (חזון איש)</div>
-                <div class="text-rose-600 font-bold text-xs">₪15</div>
+                <div class="text-emerald-700 font-bold text-xs">₪15</div>
               </div>
             </div>
-            <div class="flex items-center gap-1 bg-white p-1 rounded-xl border border-rose-200">
+            <div class="flex items-center gap-1 bg-white p-1 rounded-xl border border-emerald-200">
               <button onclick="updateQty('addon', 'aravot', -1)" class="w-6 h-6 rounded-lg bg-stone-100 font-bold text-xs">−</button>
               <span id="qty-addon-aravot" class="w-5 text-center font-bold text-xs">0</span>
-              <button onclick="updateQty('addon', 'aravot', 1)" class="w-6 h-6 rounded-lg bg-rose-500 text-white font-bold text-xs">+</button>
+              <button onclick="updateQty('addon', 'aravot', 1)" class="w-6 h-6 rounded-lg bg-emerald-700 text-white font-bold text-xs">+</button>
             </div>
           </div>
 
-          <!-- 4. טבעות קשירה (מדויק לתמונה שלך: ערימת טבעות מתכת/זהב עגולות פתוחות) -->
-          <div class="p-3 rounded-2xl border border-rose-100 bg-[#fffafb] flex items-center justify-between">
+          <!-- 4. טבעות קשירה -->
+          <div class="p-3 rounded-2xl border border-emerald-100 bg-[#fbfdfb] flex items-center justify-between">
             <div class="flex items-center gap-2.5">
-              <div class="w-14 h-14 rounded-2xl bg-white border border-rose-200 p-1 flex items-center justify-center shrink-0 shadow-2xs">
+              <div class="w-14 h-14 rounded-2xl bg-white border border-emerald-200 p-1 flex items-center justify-center shrink-0 shadow-2xs">
                 <svg viewBox="0 0 100 100" class="w-full h-full">
-                  <!-- ערימת טבעות זהב פתוחות (jump rings) בדיוק לפי התמונה -->
                   <g stroke="#d4af37" stroke-width="3.5" fill="none">
                     <path d="M30 30 A12 12 0 1 1 45 40"/>
                     <path d="M60 25 A11 11 0 1 1 73 34"/>
@@ -366,7 +385,6 @@
                     <path d="M38 18 A10 10 0 1 1 50 26"/>
                     <path d="M72 45 A10 10 0 1 1 84 53"/>
                   </g>
-                  <!-- ברק זהוב מנצנץ -->
                   <g stroke="#ffd700" stroke-width="2" fill="none">
                     <circle cx="48" cy="48" r="10" stroke-dasharray="14 4"/>
                     <circle cx="68" cy="63" r="9" stroke-dasharray="12 4"/>
@@ -375,13 +393,13 @@
               </div>
               <div>
                 <div class="font-bold text-xs text-stone-800">מארז טבעות לקשירה</div>
-                <div class="text-rose-600 font-bold text-xs">₪10</div>
+                <div class="text-emerald-700 font-bold text-xs">₪10</div>
               </div>
             </div>
-            <div class="flex items-center gap-1 bg-white p-1 rounded-xl border border-rose-200">
+            <div class="flex items-center gap-1 bg-white p-1 rounded-xl border border-emerald-200">
               <button onclick="updateQty('addon', 'rings', -1)" class="w-6 h-6 rounded-lg bg-stone-100 font-bold text-xs">−</button>
               <span id="qty-addon-rings" class="w-5 text-center font-bold text-xs">0</span>
-              <button onclick="updateQty('addon', 'rings', 1)" class="w-6 h-6 rounded-lg bg-rose-500 text-white font-bold text-xs">+</button>
+              <button onclick="updateQty('addon', 'rings', 1)" class="w-6 h-6 rounded-lg bg-emerald-700 text-white font-bold text-xs">+</button>
             </div>
           </div>
 
@@ -389,9 +407,9 @@
       </section>
 
       <!-- שלב 3: פרטי הלקוח -->
-      <section class="bg-white rounded-3xl p-6 shadow-xs border border-rose-100">
-        <div class="flex items-center gap-3 pb-4 mb-4 border-b border-rose-50">
-          <span class="w-8 h-8 rounded-full bg-rose-500 text-white font-bold text-sm flex items-center justify-center shadow-xs">3</span>
+      <section class="bg-white rounded-3xl p-6 shadow-xs border border-emerald-100/80">
+        <div class="flex items-center gap-3 pb-4 mb-4 border-b border-emerald-50">
+          <span class="w-8 h-8 rounded-full bg-emerald-700 text-white font-bold text-sm flex items-center justify-center shadow-xs">3</span>
           <div>
             <h2 class="text-lg font-bold text-stone-800">פרטי המזמין ואופן קבלה</h2>
             <p class="text-xs text-stone-400">הפרטים ישובצו אוטומטית בהודעה לוואטסאפ</p>
@@ -402,42 +420,42 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label class="block font-bold text-stone-700 mb-1">שם מלא *</label>
-              <input type="text" id="custName" placeholder="ישראל ישראלי" class="w-full p-2.5 rounded-xl border border-rose-200 bg-[#fffafb] focus:outline-rose-400">
+              <input type="text" id="custName" placeholder="ישראל ישראלי" class="w-full p-2.5 rounded-xl border border-emerald-200 bg-[#fbfdfb] focus:outline-emerald-500">
             </div>
             <div>
               <label class="block font-bold text-stone-700 mb-1">טלפון ליצירת קשר *</label>
-              <input type="tel" id="custPhone" placeholder="050-0000000" class="w-full p-2.5 rounded-xl border border-rose-200 bg-[#fffafb] text-left focus:outline-rose-400" dir="ltr">
+              <input type="tel" id="custPhone" placeholder="050-0000000" class="w-full p-2.5 rounded-xl border border-emerald-200 bg-[#fbfdfb] text-left focus:outline-emerald-500" dir="ltr">
             </div>
           </div>
 
           <div>
             <label class="block font-bold text-stone-700 mb-1.5">אופן קבלת ההזמנה:</label>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <label class="flex items-center justify-between p-3 rounded-xl border border-rose-200 bg-[#fffafb] cursor-pointer">
+              <label class="flex items-center justify-between p-3 rounded-xl border border-emerald-200 bg-[#fbfdfb] cursor-pointer">
                 <div>
                   <div class="font-bold text-stone-800">איסוף עצמי</div>
                   <div class="text-[11px] text-stone-400">ללא עלות נוספת</div>
                 </div>
-                <input type="radio" name="deliveryMethod" value="pickup" checked onchange="toggleAddress(false)" class="accent-rose-500 w-4 h-4">
+                <input type="radio" name="deliveryMethod" value="pickup" checked onchange="toggleAddress(false)" class="accent-emerald-700 w-4 h-4">
               </label>
-              <label class="flex items-center justify-between p-3 rounded-xl border border-rose-200 bg-[#fffafb] cursor-pointer">
+              <label class="flex items-center justify-between p-3 rounded-xl border border-emerald-200 bg-[#fbfdfb] cursor-pointer">
                 <div>
                   <div class="font-bold text-stone-800">משלוח עד הבית</div>
                   <div class="text-[11px] text-stone-400">בתוספת ₪35 בתיאום מראש</div>
                 </div>
-                <input type="radio" name="deliveryMethod" value="delivery" onchange="toggleAddress(true)" class="accent-rose-500 w-4 h-4">
+                <input type="radio" name="deliveryMethod" value="delivery" onchange="toggleAddress(true)" class="accent-emerald-700 w-4 h-4">
               </label>
             </div>
           </div>
 
           <div id="addressBox" class="hidden">
             <label class="block font-bold text-stone-700 mb-1">כתובת מלאה למשלוח *</label>
-            <input type="text" id="custAddress" placeholder="עיר, רחוב, מספר בית ודירה" class="w-full p-2.5 rounded-xl border border-rose-200 bg-[#fffafb] focus:outline-rose-400">
+            <input type="text" id="custAddress" placeholder="עיר, רחוב, מספר בית ודירה" class="w-full p-2.5 rounded-xl border border-emerald-200 bg-[#fbfdfb] focus:outline-emerald-500">
           </div>
 
           <div>
             <label class="block font-bold text-stone-700 mb-1">הערות נוספות:</label>
-            <textarea id="custNotes" rows="2" placeholder="בקשות מיוחדות לגבי ההזמנה..." class="w-full p-2.5 rounded-xl border border-rose-200 bg-[#fffafb] focus:outline-rose-400"></textarea>
+            <textarea id="custNotes" rows="2" placeholder="בקשות מיוחדות לגבי ההזמנה..." class="w-full p-2.5 rounded-xl border border-emerald-200 bg-[#fbfdfb] focus:outline-emerald-500"></textarea>
           </div>
         </div>
       </section>
@@ -446,19 +464,19 @@
 
     <!-- עמודת סיכום סל (דביקה) -->
     <div class="lg:col-span-4">
-      <div class="bg-white rounded-3xl p-5 shadow-sm border-2 border-rose-200 sticky top-6">
-        <div class="flex items-center justify-between border-b border-rose-100 pb-3 mb-3">
+      <div class="bg-white rounded-3xl p-5 shadow-sm border-2 border-emerald-200 sticky top-6">
+        <div class="flex items-center justify-between border-b border-emerald-100 pb-3 mb-3">
           <h3 class="font-bold text-base text-stone-800 flex items-center gap-2">
             <span>🛒</span> סל הזמנה
           </h3>
-          <span id="badgeTotalItems" class="text-xs font-semibold bg-rose-100 text-rose-700 px-2.5 py-0.5 rounded-full">0 פריטים</span>
+          <span id="badgeTotalItems" class="text-xs font-semibold bg-emerald-100 text-emerald-800 px-2.5 py-0.5 rounded-full">0 פריטים</span>
         </div>
 
-        <div id="basketList" class="space-y-2 text-xs max-h-48 overflow-y-auto mb-3 divide-y divide-rose-50">
+        <div id="basketList" class="space-y-2 text-xs max-h-48 overflow-y-auto mb-3 divide-y divide-emerald-50">
           <div class="text-stone-400 text-center py-6">הסל שלך ריק עדיין</div>
         </div>
 
-        <div class="space-y-1.5 border-t border-rose-100 pt-3 text-xs text-stone-500">
+        <div class="space-y-1.5 border-t border-emerald-100 pt-3 text-xs text-stone-500">
           <div class="flex justify-between">
             <span>סה"כ סטים:</span>
             <span id="priceSets" class="font-bold text-stone-800 price-tag">₪0</span>
@@ -467,18 +485,18 @@
             <span>תוספות:</span>
             <span id="priceAddons" class="font-bold text-stone-800 price-tag">₪0</span>
           </div>
-          <div id="deliveryFeeRow" class="flex justify-between text-rose-600 font-bold hidden">
+          <div id="deliveryFeeRow" class="flex justify-between text-emerald-700 font-bold hidden">
             <span>דמי משלוח:</span>
             <span class="price-tag">₪35</span>
           </div>
         </div>
 
-        <div class="mt-4 pt-3 border-t-2 border-rose-100 flex justify-between items-center bg-[#fff8f9] p-3 rounded-2xl border border-rose-200/50">
+        <div class="mt-4 pt-3 border-t-2 border-emerald-100 flex justify-between items-center bg-[#eef7f0] p-3 rounded-2xl border border-emerald-200/60">
           <div>
             <span class="block text-xs font-bold text-stone-800">סה"כ לתשלום:</span>
             <span class="text-[10px] text-stone-400">סופי כולל הכל</span>
           </div>
-          <span id="grandTotal" class="text-2xl font-extrabold text-rose-600 price-tag">₪0</span>
+          <span id="grandTotal" class="text-2xl font-extrabold text-emerald-800 price-tag">₪0</span>
         </div>
 
         <!-- כפתור שליחה לוואטסאפ -->
