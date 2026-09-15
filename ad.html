@@ -11,17 +11,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <style>
     body { font-family: 'Assistant', sans-serif; }
-    .mint-badge {
-      background-color: #8fb39e;
-    }
-    .mint-light {
-      background-color: #f2f7f4;
-    }
-    .mint-border {
-      border-color: #8fb39e;
-    }
-    .mint-text {
-      color: #3b5c47;
+    .mint-badge { background-color: #8fb39e; }
+    .mint-light { background-color: #f2f7f4; }
+    .mint-border { border-color: #8fb39e; }
+    .mint-text { color: #3b5c47; }
+    
+    /* אפקט צביעה במכחול לכותרת */
+    .brush-stroke {
+      background: linear-gradient(135deg, #a4c9b4 0%, #8fb39e 100%);
+      border-radius: 1.2rem 0.5rem 1.4rem 0.6rem;
+      position: relative;
     }
   </style>
 </head>
@@ -40,83 +39,59 @@
   <!-- מודעת הפרימיום המעוצבת -->
   <div id="flyerCard" class="w-full max-w-[480px] bg-white text-stone-900 rounded-[28px] p-7 shadow-2xl border-2 border-stone-200 relative overflow-hidden flex flex-col justify-between">
 
-    <!-- חלק עליון: כותרת ואיור -->
-    <div class="flex items-start justify-between gap-2 mb-3">
-      <div class="flex-1 text-right pt-2">
-        <h1 class="text-4xl font-black text-stone-900 leading-none tracking-tight mb-1">
-          מכירת
+    <!-- רקע עדין ומטושטש של ארבעת המינים למעלה (בהיר מאחורי הטקסט) -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-44 opacity-10 pointer-events-none flex items-center justify-center overflow-hidden">
+      <svg viewBox="0 0 160 220" class="w-72 h-72 transform -translate-y-6">
+        <line x1="80" y1="210" x2="80" y2="8" stroke="#184e1b" stroke-width="12"/>
+        <path d="M72 195 Q52 130 45 40" stroke="#8d5b4c" stroke-width="5" fill="none"/>
+        <path d="M76 195 Q60 110 58 15" stroke="#795548" stroke-width="4" fill="none"/>
+        <line x1="108" y1="195" x2="115" y2="45" stroke="#4e342e" stroke-width="5"/>
+        <path d="M80 118 C83 126 90 138 98 152 C108 168 106 190 92 201 C78 212 58 208 51 192 C45 178 48 160 58 145 C67 131 77 125 80 118 Z" fill="#ffd600"/>
+      </svg>
+    </div>
+
+    <!-- חלק עליון: כותרת ממוכזת עם אפקט מכחול -->
+    <div class="text-center relative z-10 pt-2 mb-3">
+      
+      <!-- כותרת ראשית עם רקע צביעה במכחול -->
+      <div class="inline-block px-6 py-2 mb-3 brush-stroke shadow-sm transform -rotate-1">
+        <h1 class="text-3xl sm:text-4xl font-black text-white leading-tight tracking-tight drop-shadow-xs">
+          מכירת ארבעת המינים
         </h1>
-        <h2 class="text-3xl font-black text-stone-900 leading-tight mb-2.5">
-          ארבעת המינים
-        </h2>
-        
-        <!-- תגית שנה בסגנון משיכת מכחול -->
-        <div class="inline-block mint-badge text-white font-black text-base px-8 py-1 rounded-full shadow-xs mb-3 transform -rotate-1">
+      </div>
+      
+      <!-- תגית שנה -->
+      <div class="flex justify-center mb-3">
+        <span class="bg-stone-900 text-white font-black text-xs px-5 py-0.5 rounded-full shadow-xs tracking-wider">
           תשפ"ז
-        </div>
-
-        <p class="text-stone-800 font-bold text-xs sm:text-[13px] leading-relaxed">
-          ממשיכים במסורת עם המארזים הכי איכותיים,<br>
-          ההכשרים הכי מהודרים ובמחירים הכי משתלמים!
-        </p>
+        </span>
       </div>
 
-      <!-- איור ארבעת המינים בצד שמאל -->
-      <div class="w-28 h-52 flex-shrink-0 flex items-center justify-center">
-        <svg viewBox="0 0 160 220" class="w-full h-full drop-shadow-sm">
-          <line x1="80" y1="210" x2="80" y2="8" stroke="#256e29" stroke-width="6" stroke-linecap="round"/>
-          <line x1="79" y1="8" x2="79" y2="210" stroke="#184e1b" stroke-width="2"/>
-
-          <!-- ערבות -->
-          <path d="M72 195 Q52 130 45 40" stroke="#8d5b4c" stroke-width="2.5" fill="none"/>
-          <path d="M45 40 C35 55 35 75 48 90" fill="#7cb342"/>
-          <path d="M49 85 C30 100 28 125 55 135" fill="#8bc34a"/>
-          <path d="M56 130 C32 145 35 168 62 172" fill="#7cb342"/>
-
-          <path d="M76 195 Q60 110 58 15" stroke="#795548" stroke-width="2" fill="none"/>
-          <path d="M58 15 C50 30 52 48 62 60" fill="#8bc34a"/>
-          <path d="M62 60 C48 78 50 102 66 112" fill="#7cb342"/>
-
-          <!-- הדסים -->
-          <line x1="108" y1="195" x2="115" y2="45" stroke="#4e342e" stroke-width="2.5"/>
-          <g fill="#1b5e20">
-            <path d="M115 45 C111 40 107 43 111 50 Z"/>
-            <path d="M115 45 C119 40 123 43 119 50 Z"/>
-            <path d="M114 62 C108 57 104 61 109 69 Z"/>
-            <path d="M114 62 C120 57 124 61 119 69 Z"/>
-            <path d="M113 80 C106 74 102 79 107 88 Z"/>
-            <path d="M113 80 C120 74 124 79 119 88 Z"/>
-            <path d="M111 100 C103 93 99 99 105 109 Z"/>
-            <path d="M111 100 C119 93 123 99 117 109 Z"/>
-          </g>
-
-          <!-- אתרוג -->
-          <path d="M80 118 C83 126 90 138 98 152 C108 168 106 190 92 201 C78 212 58 208 51 192 C45 178 48 160 58 145 C67 131 77 125 80 118 Z" fill="#ffd600" stroke="#e6b800" stroke-width="1.8"/>
-          <circle cx="80" cy="116" r="2.8" fill="#4e342e"/>
-          <line x1="80" y1="116" x2="80" y2="110" stroke="#3e2723" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </div>
+      <p class="text-stone-800 font-bold text-xs sm:text-[13px] leading-relaxed max-w-[380px] mx-auto">
+        ממשיכים במסורת עם המארזים הכי איכותיים,<br>
+        ההכשרים הכי מהודרים ובמחירים הכי משתלמים!
+      </p>
     </div>
 
     <!-- קו הפרדה אלגנטי -->
-    <div class="flex items-center justify-center gap-3 my-1 mint-text opacity-50">
+    <div class="flex items-center justify-center gap-3 my-2 mint-text opacity-50 relative z-10">
       <span>✦</span>
       <div class="w-32 h-0.5 mint-badge rounded-full"></div>
       <span>✦</span>
     </div>
 
-    <!-- כפתור מרכזי: קנייה במקום ואיסוף עצמי -->
-    <div class="text-center my-3">
-      <div class="inline-block w-full max-w-[340px] mint-badge text-white font-black text-sm sm:text-base py-2.5 px-6 rounded-full shadow-md tracking-wide">
-        הקניה במקום ויש אפשרות להזמנה ואיסוף עצמי
+    <!-- כפתור מרכזי מעודכן -->
+    <div class="text-center my-2.5 relative z-10">
+      <div class="inline-block w-full max-w-[360px] mint-badge text-white font-black text-xs sm:text-sm py-2 px-4 rounded-full shadow-md tracking-wide">
+        קניה במקום / הזמנה ואיסוף עצמי
       </div>
     </div>
 
     <!-- שתי מסגרות מקווקוות מעוצבות -->
-    <div class="grid grid-cols-2 gap-3.5 my-3">
+    <div class="grid grid-cols-2 gap-3.5 my-3 relative z-10">
       
       <!-- מסגרת ימנית: סוגי הסטים -->
-      <div class="border-2 border-dashed mint-border rounded-2xl p-3 flex flex-col justify-start relative text-center bg-stone-50/50">
+      <div class="border-2 border-dashed mint-border rounded-2xl p-3 flex flex-col justify-start relative text-center bg-stone-50/70">
         <div class="mint-badge text-white font-extrabold text-xs py-1 px-4 rounded-xl -mt-5 mx-auto mb-2 w-max shadow-xs">
           מגוון הסטים
         </div>
@@ -129,7 +104,7 @@
       </div>
 
       <!-- מסגרת שמאלית: למה לקנות אצלנו? -->
-      <div class="border-2 border-dashed mint-border rounded-2xl p-3 flex flex-col justify-start relative text-center bg-stone-50/50">
+      <div class="border-2 border-dashed mint-border rounded-2xl p-3 flex flex-col justify-start relative text-center bg-stone-50/70">
         <div class="mint-badge text-white font-extrabold text-xs py-1 px-4 rounded-xl -mt-5 mx-auto mb-2 w-max shadow-xs">
           למה לקנות אצלנו?
         </div>
@@ -143,7 +118,7 @@
     </div>
 
     <!-- תוספות וציוד משלים -->
-    <div class="text-center my-3">
+    <div class="text-center my-3 relative z-10">
       <div class="inline-block mint-badge text-white font-black text-xs py-1 px-5 rounded-xl mb-2.5 shadow-xs">
         תוספות וציוד משלים
       </div>
@@ -168,7 +143,7 @@
     </div>
 
     <!-- כתובת האיסוף במקום -->
-    <div class="mint-light p-3 rounded-2xl border mint-border my-2.5 text-center shadow-2xs">
+    <div class="mint-light p-3 rounded-2xl border mint-border my-2 text-center shadow-2xs relative z-10">
       <div class="font-black text-xs mint-text flex items-center justify-center gap-1.5 mb-0.5">
         <span class="text-base">📍</span> כתובת האיסוף:
       </div>
@@ -177,15 +152,15 @@
       </div>
     </div>
 
-    <!-- קישור לאתר ומספר הזמנות בתחתית -->
-    <div class="text-center pt-3 border-t-2 border-stone-100">
+    <!-- קישור לאתר ופרטי קשר בתחתית -->
+    <div class="text-center pt-2.5 border-t-2 border-stone-100 relative z-10">
       <div class="text-xs font-bold text-stone-600 mb-0.5">להזמנה אונליין, מחירון מלא ותשלום מהיר:</div>
-      <div class="text-sm font-black mint-text tracking-wider dir-ltr font-mono mb-2 bg-emerald-50 py-1 rounded-lg border border-emerald-100">
+      <div class="text-xs font-black mint-text tracking-wider dir-ltr font-mono mb-2 bg-emerald-50 py-1 rounded-lg border border-emerald-100">
         tinyurl.com/arbaat-haminim
       </div>
 
       <div class="font-black text-sm text-stone-900">
-        לפרטים והזמנות - בוואטסאפ ובטלפון:
+        לפרטים והזמנות - אוריה אטלי:
       </div>
       <div class="text-2xl font-black font-mono text-stone-900 tracking-wider mt-0.5 mint-text">
         053-9621454
