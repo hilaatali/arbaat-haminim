@@ -25,7 +25,7 @@
   <header class="relative bg-gradient-to-b from-[#1b3d2b] via-[#2d573e] to-[#f4faf5] text-white pt-12 pb-16 px-4 shadow-sm overflow-hidden text-center">
     <div class="max-w-2xl mx-auto relative z-10 space-y-4">
       
-      <!-- איור ארבעת המינים המדויק -->
+      <!-- איור מרכזי מדויק של ארבעת המינים -->
       <div class="w-32 h-40 mx-auto bg-white/10 backdrop-blur-md rounded-3xl p-2 border border-emerald-300/30 shadow-lg flex items-center justify-center">
         <svg viewBox="0 0 160 220" class="w-full h-full drop-shadow-md">
           <line x1="80" y1="210" x2="80" y2="8" stroke="#256e29" stroke-width="7" stroke-linecap="round"/>
@@ -87,7 +87,7 @@
       </div>
       <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow-sm">ארבעת המינים למהדרין</h1>
       <p class="text-emerald-100/90 text-xs md:text-sm max-w-md mx-auto font-normal">
-        בחרו את הסט והאביזרים הרצויים ושלחו את ההזמנה ישירות לוואטסאפ
+        בחרו את הסט והאביזרים הרצויים ושלחו את ההזמנה בלחיצה אחת
       </p>
     </div>
   </header>
@@ -377,7 +377,7 @@
           <span class="w-8 h-8 rounded-full bg-emerald-700 text-white font-bold text-sm flex items-center justify-center shadow-xs">3</span>
           <div>
             <h2 class="text-lg font-bold text-stone-800">פרטי המזמין ואופן קבלה</h2>
-            <p class="text-xs text-stone-400">הפרטים ישובצו אוטומטית בהודעה לוואטסאפ</p>
+            <p class="text-xs text-stone-400">הפרטים ישובצו אוטומטית בהודעה</p>
           </div>
         </div>
 
@@ -464,23 +464,26 @@
           <span id="grandTotal" class="text-2xl font-extrabold text-emerald-800 price-tag">₪0</span>
         </div>
 
-        <!-- כפתורי פעולה: שליחה לוואטסאפ ואפשרויות תשלום -->
-        <div class="mt-4 space-y-2">
+        <!-- כפתורי פעולה עיקריים -->
+        <div class="mt-4 space-y-2.5">
           
-          <!-- 1. כפתור שליחה לוואטסאפ -->
-          <button onclick="sendOrderToWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-4 rounded-2xl shadow-sm transition flex items-center justify-center gap-2 text-sm">
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-            </svg>
-            שליחת הזמנה לוואטסאפ
-          </button>
+          <!-- 1. כפתור שליחת הזמנה -->
+          <div>
+            <button onclick="sendOrderToWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-4 rounded-2xl shadow-sm transition flex items-center justify-center gap-2 text-sm">
+              <svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+              <span>שליחת הזמנה</span>
+            </button>
+            <p class="text-[11px] font-bold text-emerald-800 text-center mt-1.5 bg-emerald-50/80 py-1 px-2 rounded-lg border border-emerald-200/60">
+              📌 נא לצרף צילום מסך של אישור התשלום להודעה
+            </p>
+          </div>
 
-          <!-- 2. כפתור תשלום ב-Bit -->
+          <!-- 2. כפתור תשלום מהיר ב-Bit -->
           <button onclick="payWithBit()" class="w-full bg-[#0089e6] hover:bg-[#007acc] text-white font-bold py-3 px-4 rounded-2xl shadow-sm transition flex items-center justify-center gap-2 text-sm">
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5h-2v-2h2v2zm0-4h-2V7h2v5.5z"/>
-            </svg>
-            <span>תשלום מהיר ב-Bit</span>
+            <div class="w-5 h-5 rounded-full bg-white text-[#0089e6] flex items-center justify-center font-black text-xs">b</div>
+            <span>תשלום ב-Bit</span>
           </button>
 
           <!-- 3. כפתור העברה בנקאית -->
@@ -497,7 +500,41 @@
 
   </main>
 
-  <!-- חלונית פרטי העברה בנקאית (Modal) -->
+  <!-- חלונית הצגת פרטי Bit ישירים -->
+  <div id="bitModal" class="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-3xl p-6 max-w-sm w-full shadow-2xl border border-sky-100 text-center relative">
+      <button onclick="closeBitModal()" class="absolute top-4 left-4 text-stone-400 hover:text-stone-600 font-bold text-lg">✕</button>
+      
+      <div class="w-14 h-14 rounded-2xl bg-[#0089e6] text-white flex items-center justify-center text-2xl font-black mx-auto mb-3 shadow-sm">
+        b
+      </div>
+      
+      <h3 class="font-extrabold text-base text-stone-900 mb-1">תשלום באפליקציית Bit</h3>
+      <p class="text-xs text-stone-500 mb-4">העבירו את הסכום למספר שלהלן</p>
+
+      <div class="bg-sky-50 p-4 rounded-2xl border border-sky-200 text-center space-y-2 mb-4 font-mono">
+        <div>
+          <span class="text-xs text-stone-500 font-sans block mb-0.5">מספר להעברה:</span>
+          <span class="font-black text-lg text-sky-900 tracking-wider">053-9621454</span>
+        </div>
+        <div class="pt-2 border-t border-sky-200">
+          <span class="text-xs text-stone-500 font-sans block mb-0.5">סכום מדויק לתשלום:</span>
+          <span class="font-black text-xl text-emerald-800" id="bitModalAmount">₪0</span>
+        </div>
+      </div>
+
+      <div class="space-y-2">
+        <button onclick="openBitAppDirectly()" class="w-full bg-[#0089e6] hover:bg-[#007acc] text-white font-bold py-2.5 rounded-xl text-xs transition">
+          פתח אפליקציית Bit במכשיר
+        </button>
+        <button onclick="closeBitModal()" class="w-full bg-stone-100 hover:bg-stone-200 text-stone-600 font-bold py-2 rounded-xl text-xs transition">
+          סגור
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- חלונית פרטי העברה בנקאית (Modal מעודכן) -->
   <div id="bankModal" class="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 flex items-center justify-center p-4 hidden">
     <div class="bg-white rounded-3xl p-6 max-w-sm w-full shadow-2xl border border-emerald-100 text-center relative">
       <button onclick="closeBankModal()" class="absolute top-4 left-4 text-stone-400 hover:text-stone-600 font-bold text-lg">✕</button>
@@ -507,24 +544,24 @@
       </div>
       
       <h3 class="font-extrabold text-base text-stone-900 mb-1">פרטים להעברה בנקאית</h3>
-      <p class="text-xs text-stone-500 mb-4">נא לבצע את ההעברה ולשלוח אישור בוואטסאפ</p>
+      <p class="text-xs text-stone-500 mb-4">נא לבצע את ההעברה ולצרף אישור בהודעה</p>
 
       <div class="bg-[#f4faf5] p-3.5 rounded-2xl border border-emerald-200/70 text-right text-xs space-y-2 mb-4 font-mono">
         <div class="flex justify-between">
           <span class="text-stone-500 font-sans">בנק:</span>
-          <span class="font-bold text-stone-800" id="bankName">שם הבנק</span>
+          <span class="font-bold text-stone-800" id="bankName">מרכנתיל דיסקונט (17)</span>
         </div>
         <div class="flex justify-between">
           <span class="text-stone-500 font-sans">מספר סניף:</span>
-          <span class="font-bold text-stone-800" id="bankBranch">000</span>
+          <span class="font-bold text-stone-800" id="bankBranch">בני ברק (732)</span>
         </div>
         <div class="flex justify-between">
           <span class="text-stone-500 font-sans">מספר חשבון:</span>
-          <span class="font-bold text-stone-800" id="bankAccount">000000</span>
+          <span class="font-bold text-stone-800" id="bankAccount">93280310</span>
         </div>
         <div class="flex justify-between">
           <span class="text-stone-500 font-sans">שם המוטב:</span>
-          <span class="font-bold text-stone-800" id="bankOwner">שם בעל החשבון</span>
+          <span class="font-bold text-stone-800" id="bankOwner">אוריה אטלי</span>
         </div>
         <div class="flex justify-between pt-1 border-t border-emerald-200">
           <span class="text-stone-500 font-sans">סכום להעברה:</span>
@@ -540,7 +577,7 @@
           סגור
         </button>
       </div>
-      <div id="copyAlert" class="text-[11px] text-emerald-700 font-bold mt-2 hidden">הפרטים הועתקו ללוח בהצלחה!</div>
+      <div id="copyAlert" class="text-[11px] text-emerald-700 font-bold mt-2 hidden">הפרטים הועתקו בהצלחה!</div>
     </div>
   </div>
 
@@ -613,6 +650,7 @@
       document.getElementById('priceAddons').textContent = `₪${addonsTotal}`;
       document.getElementById('grandTotal').textContent = `₪${currentGrandTotal}`;
       document.getElementById('bankAmount').textContent = `₪${currentGrandTotal}`;
+      document.getElementById('bitModalAmount').textContent = `₪${currentGrandTotal}`;
       document.getElementById('badgeTotalItems').textContent = `${totalCount} פריטים`;
     }
 
@@ -695,6 +733,7 @@
 
       text += `───────────────────────\n`;
       text += `💰 *סה"כ לתשלום: ₪${totalCost}*\n`;
+      text += `📸 *אישור תשלום:* נא לצרף צילום מסך במידה ושולם ב-Bit / העברה\n`;
 
       if (notes) {
         text += `\n📝 *הערות:* ${notes}\n`;
@@ -713,13 +752,28 @@
         alert('אנא בחרו פריטים בסל לפני המעבר לתשלום ב-Bit.');
         return;
       }
-      // פתיחת אפליקציית ביט עם הסכום והטלפון
+      
+      document.getElementById('bitModalAmount').textContent = `₪${currentGrandTotal}`;
+      document.getElementById('bitModal').classList.remove('hidden');
+
+      openBitAppDirectly();
+    }
+
+    function openBitAppDirectly() {
       const bitUrl = `https://bitpay.co.il/app/pay?phone=${MY_BIT_PHONE}&amount=${currentGrandTotal}`;
       window.open(bitUrl, '_blank');
     }
 
+    function closeBitModal() {
+      document.getElementById('bitModal').classList.add('hidden');
+    }
+
     // פונקציות העברה בנקאית
     function openBankModal() {
+      if (currentGrandTotal === 0) {
+        alert('אנא בחרו פריטים בסל לפני המעבר להעברה בנקאית.');
+        return;
+      }
       document.getElementById('bankModal').classList.remove('hidden');
     }
 
@@ -734,7 +788,7 @@
       const acc = document.getElementById('bankAccount').textContent;
       const owner = document.getElementById('bankOwner').textContent;
       
-      const copyText = `פרטים להעברה בנקאית:\nבנק: ${bank}\nסניף: ${branch}\nחשבון: ${acc}\nמוטב: ${owner}\nסכום: ₪${currentGrandTotal}`;
+      const copyText = `פרטים להעברה בנקאית:\nמוטב: ${owner}\nבנק: ${bank}\nסניף: ${branch}\nמספר חשבון: ${acc}\nסכום לתשלום: ₪${currentGrandTotal}`;
       navigator.clipboard.writeText(copyText).then(() => {
         document.getElementById('copyAlert').classList.remove('hidden');
       });
