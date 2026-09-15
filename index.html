@@ -480,8 +480,8 @@
             </p>
           </div>
 
-          <!-- 2. כפתור תשלום מהיר ב-Bit -->
-          <button onclick="payWithBit()" class="w-full bg-[#0089e6] hover:bg-[#007acc] text-white font-bold py-3 px-4 rounded-2xl shadow-sm transition flex items-center justify-center gap-2 text-sm">
+          <!-- 2. כפתור תשלום ב-Bit (פותח תחילה חלונית עם הפרטים והסכום) -->
+          <button onclick="openBitDetailsModal()" class="w-full bg-[#0089e6] hover:bg-[#007acc] text-white font-bold py-3 px-4 rounded-2xl shadow-sm transition flex items-center justify-center gap-2 text-sm">
             <div class="w-5 h-5 rounded-full bg-white text-[#0089e6] flex items-center justify-center font-black text-xs">b</div>
             <span>תשלום ב-Bit</span>
           </button>
@@ -500,7 +500,7 @@
 
   </main>
 
-  <!-- חלונית הצגת פרטי Bit ישירים -->
+  <!-- חלונית פרטי תשלום ב-Bit (מוצגת ראשונה עם כל המידע וכפתורי העתקה) -->
   <div id="bitModal" class="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 flex items-center justify-center p-4 hidden">
     <div class="bg-white rounded-3xl p-6 max-w-sm w-full shadow-2xl border border-sky-100 text-center relative">
       <button onclick="closeBitModal()" class="absolute top-4 left-4 text-stone-400 hover:text-stone-600 font-bold text-lg">✕</button>
@@ -509,32 +509,41 @@
         b
       </div>
       
-      <h3 class="font-extrabold text-base text-stone-900 mb-1">תשלום באפליקציית Bit</h3>
-      <p class="text-xs text-stone-500 mb-4">העבירו את הסכום למספר שלהלן</p>
+      <h3 class="font-extrabold text-base text-stone-900 mb-1">העברת תשלום ב-Bit</h3>
+      <p class="text-xs text-stone-500 mb-4">העתיקו את המספר והסכום, ולאחר מכן עברו לאפליקציה</p>
 
-      <div class="bg-sky-50 p-4 rounded-2xl border border-sky-200 text-center space-y-2 mb-4 font-mono">
+      <div class="bg-sky-50/70 p-4 rounded-2xl border border-sky-200 text-center space-y-3 mb-4">
         <div>
-          <span class="text-xs text-stone-500 font-sans block mb-0.5">מספר להעברה:</span>
-          <span class="font-black text-lg text-sky-900 tracking-wider">053-9621454</span>
+          <span class="text-xs text-stone-500 font-sans block mb-1">מספר טלפון להעברה:</span>
+          <div class="flex items-center justify-center gap-2">
+            <span class="font-black text-lg text-sky-900 font-mono tracking-wider">053-9621454</span>
+            <button onclick="copyBitPhone()" class="text-xs bg-white hover:bg-sky-100 text-sky-700 border border-sky-300 font-bold px-2 py-0.5 rounded-lg transition">העתק</button>
+          </div>
         </div>
+        
         <div class="pt-2 border-t border-sky-200">
           <span class="text-xs text-stone-500 font-sans block mb-0.5">סכום מדויק לתשלום:</span>
-          <span class="font-black text-xl text-emerald-800" id="bitModalAmount">₪0</span>
+          <div class="flex items-center justify-center gap-2">
+            <span class="font-black text-2xl text-emerald-800 font-mono" id="bitModalAmount">₪0</span>
+            <button onclick="copyBitAmount()" class="text-xs bg-white hover:bg-emerald-100 text-emerald-700 border border-emerald-300 font-bold px-2 py-0.5 rounded-lg transition">העתק</button>
+          </div>
         </div>
       </div>
 
       <div class="space-y-2">
-        <button onclick="openBitAppDirectly()" class="w-full bg-[#0089e6] hover:bg-[#007acc] text-white font-bold py-2.5 rounded-xl text-xs transition">
-          פתח אפליקציית Bit במכשיר
+        <button onclick="launchBitApp()" class="w-full bg-[#0089e6] hover:bg-[#007acc] text-white font-bold py-2.5 rounded-xl text-xs transition flex items-center justify-center gap-2">
+          <span>מעבר לאפליקציית Bit</span>
+          <span>↗</span>
         </button>
         <button onclick="closeBitModal()" class="w-full bg-stone-100 hover:bg-stone-200 text-stone-600 font-bold py-2 rounded-xl text-xs transition">
           סגור
         </button>
       </div>
+      <div id="bitCopyAlert" class="text-[11px] text-sky-700 font-bold mt-2 hidden">הועתק ללוח בהצלחה!</div>
     </div>
   </div>
 
-  <!-- חלונית פרטי העברה בנקאית (Modal מעודכן) -->
+  <!-- חלונית פרטי העברה בנקאית (Modal) -->
   <div id="bankModal" class="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 flex items-center justify-center p-4 hidden">
     <div class="bg-white rounded-3xl p-6 max-w-sm w-full shadow-2xl border border-emerald-100 text-center relative">
       <button onclick="closeBankModal()" class="absolute top-4 left-4 text-stone-400 hover:text-stone-600 font-bold text-lg">✕</button>
@@ -733,7 +742,7 @@
 
       text += `───────────────────────\n`;
       text += `💰 *סה"כ לתשלום: ₪${totalCost}*\n`;
-      text += `📸 *אישור תשלום:* נא לצרף צילום מסך במידה ושולם ב-Bit / העברה\n`;
+      text += `📸 *אישור תשלום:* נא לצרף צילום מסך של אישור ההעברה ב-Bit / בנק\n`;
 
       if (notes) {
         text += `\n📝 *הערות:* ${notes}\n`;
@@ -746,26 +755,44 @@
       window.open(url, '_blank');
     }
 
-    // פונקציית תשלום ב-Bit
-    function payWithBit() {
+    // פתיחת חלונית Bit תחילה (בלי פתיחה ישירה וכפויה של האפליקציה)
+    function openBitDetailsModal() {
       if (currentGrandTotal === 0) {
         alert('אנא בחרו פריטים בסל לפני המעבר לתשלום ב-Bit.');
         return;
       }
-      
       document.getElementById('bitModalAmount').textContent = `₪${currentGrandTotal}`;
       document.getElementById('bitModal').classList.remove('hidden');
-
-      openBitAppDirectly();
-    }
-
-    function openBitAppDirectly() {
-      const bitUrl = `https://bitpay.co.il/app/pay?phone=${MY_BIT_PHONE}&amount=${currentGrandTotal}`;
-      window.open(bitUrl, '_blank');
+      document.getElementById('bitCopyAlert').classList.add('hidden');
     }
 
     function closeBitModal() {
       document.getElementById('bitModal').classList.add('hidden');
+    }
+
+    function launchBitApp() {
+      // מעבר לאפליקציית Bit רק בלחיצה יזומה מתוך החלונית
+      const bitUrl = `https://bitpay.co.il/app/`;
+      window.open(bitUrl, '_blank');
+    }
+
+    function copyBitPhone() {
+      navigator.clipboard.writeText("0539621454").then(() => {
+        showBitAlert("מספר הטלפון הועתק!");
+      });
+    }
+
+    function copyBitAmount() {
+      navigator.clipboard.writeText(currentGrandTotal.toString()).then(() => {
+        showBitAlert("הסכום לתשלום הועתק!");
+      });
+    }
+
+    function showBitAlert(msg) {
+      const el = document.getElementById('bitCopyAlert');
+      el.textContent = msg;
+      el.classList.remove('hidden');
+      setTimeout(() => el.classList.add('hidden'), 2500);
     }
 
     // פונקציות העברה בנקאית
@@ -775,11 +802,11 @@
         return;
       }
       document.getElementById('bankModal').classList.remove('hidden');
+      document.getElementById('copyAlert').classList.add('hidden');
     }
 
     function closeBankModal() {
       document.getElementById('bankModal').classList.add('hidden');
-      document.getElementById('copyAlert').classList.add('hidden');
     }
 
     function copyBankDetails() {
