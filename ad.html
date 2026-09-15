@@ -3,54 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>מודעת פרסום - ארבעת המינים למהדרין</title>
+  <title>מודעת מכירת ארבעת המינים למהדרין</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <style>
     body { font-family: 'Rubik', sans-serif; }
   </style>
 </head>
-<body class="bg-stone-900 min-h-screen flex flex-col items-center justify-center p-4 py-8">
+<body class="bg-stone-800 min-h-screen flex flex-col items-center justify-center p-4 py-8">
 
-  <!-- כפתור הורדה כתמונה -->
+  <!-- כפתור שמירה כתמונה -->
   <div class="mb-5">
-    <button onclick="downloadPoster()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-6 rounded-2xl shadow-xl transition flex items-center gap-2 text-sm md:text-base">
+    <button onclick="downloadFlyer()" class="bg-emerald-700 hover:bg-emerald-600 text-white font-bold py-3 px-6 rounded-2xl shadow-xl transition flex items-center gap-2 text-sm md:text-base">
       <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
       </svg>
-      <span>הורדת המודעה כתמונה (PNG) לשיתוף</span>
+      <span>הורדת המודעה כתמונה (PNG)</span>
     </button>
   </div>
 
-  <!-- כרזת הפרסומת (מיועדת לשמירה) -->
-  <div id="posterCard" class="w-full max-w-[480px] bg-gradient-to-b from-[#12281c] via-[#1a3827] to-[#0f2117] text-white rounded-[36px] p-7 shadow-2xl border-2 border-amber-400/40 relative overflow-hidden">
-    
-    <!-- עיטורי רקע מוזהבים -->
-    <div class="absolute -top-16 -right-16 w-44 h-44 bg-amber-400/10 rounded-full blur-2xl"></div>
-    <div class="absolute -bottom-16 -left-16 w-44 h-44 bg-emerald-400/10 rounded-full blur-2xl"></div>
+  <!-- כרזת המודעה במבנה המדויק של התמונה -->
+  <div id="flyerCard" class="w-full max-w-[500px] bg-white text-stone-900 rounded-3xl p-7 shadow-2xl border border-stone-200 relative overflow-hidden text-center">
 
-    <!-- כותרת ראשית עליונה -->
-    <div class="text-center relative z-10 space-y-2">
-      <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-400/15 text-amber-300 text-[11px] font-bold border border-amber-400/30">
-        <span>✨</span> חג הסוכות • מהדרין מן המהדרין
+    <!-- חלק עליון: כותרת + תמונת ארבעת המינים בצד -->
+    <div class="flex items-start justify-between gap-4 mb-4 text-right">
+      <div class="flex-1 space-y-1.5 pt-1">
+        <h1 class="text-3xl sm:text-4xl font-black text-stone-900 leading-tight">
+          מכירת<br>ארבעת המינים
+        </h1>
+        
+        <!-- תגית שנת תשפ"ז בגוון מנטה -->
+        <div class="inline-block bg-[#86b59b] text-white font-black text-base px-6 py-1 rounded-full shadow-xs">
+          תשפ"ז
+        </div>
+
+        <p class="text-stone-700 font-semibold text-xs sm:text-sm pt-2 leading-snug">
+          ממשיכים במסורת עם המארזים הכי איכותיים<br>
+          ההכשרים הכי מהודרים ובמחירים משתלמים!
+        </p>
       </div>
-      
-      <h1 class="text-3xl font-black text-white tracking-tight drop-shadow-md">
-        מכירת ארבעת המינים למהדרין
-      </h1>
-      <p class="text-emerald-200 text-xs font-medium">
-        מבחר סטים מבוקרים, נקיים ומהודרים כהלכתם
-      </p>
-    </div>
 
-    <!-- תמונת ארבעת המינים המרכזית -->
-    <div class="my-5 relative z-10 flex justify-center">
-      <div class="w-36 h-44 bg-white/10 backdrop-blur-md rounded-3xl p-3 border border-amber-300/30 shadow-inner flex items-center justify-center">
-        <svg viewBox="0 0 160 220" class="w-full h-full drop-shadow-lg">
-          <!-- לולב -->
+      <!-- איור ארבעת המינים המדויק בצד שמאל -->
+      <div class="w-28 sm:w-32 h-44 flex-shrink-0 flex items-center justify-center">
+        <svg viewBox="0 0 160 220" class="w-full h-full drop-shadow-sm">
           <line x1="80" y1="210" x2="80" y2="8" stroke="#256e29" stroke-width="7" stroke-linecap="round"/>
           <line x1="79" y1="8" x2="79" y2="210" stroke="#184e1b" stroke-width="2"/>
 
@@ -77,68 +75,95 @@
             <path d="M111 100 C119 93 123 99 117 109 Z"/>
           </g>
 
-          <!-- אתרוג -->
-          <path d="M80 118 C83 126 90 138 98 152 C108 168 106 190 92 201 C78 212 58 208 51 192 C45 178 48 160 58 145 C67 131 77 125 80 118 Z" 
-                fill="#ffd600" stroke="#e6b800" stroke-width="1.8"/>
-          <path d="M53 186 C49 174 51 159 60 147 C67 136 75 127 79 120" stroke="#fff9c4" stroke-width="2.5" fill="none"/>
+          <!-- אתרוג צהוב בוהק -->
+          <path d="M80 118 C83 126 90 138 98 152 C108 168 106 190 92 201 C78 212 58 208 51 192 C45 178 48 160 58 145 C67 131 77 125 80 118 Z" fill="#ffd600" stroke="#e6b800" stroke-width="1.8"/>
           <circle cx="80" cy="116" r="2.8" fill="#4e342e"/>
           <line x1="80" y1="116" x2="80" y2="110" stroke="#3e2723" stroke-width="2" stroke-linecap="round"/>
         </svg>
       </div>
     </div>
 
-    <!-- פירוט מחירון הסטים -->
-    <div class="space-y-2.5 relative z-10 mb-4">
-      <div class="flex items-center justify-between p-2.5 rounded-2xl bg-white/10 border border-white/10">
-        <div class="flex items-center gap-2">
-          <span class="text-base">🍋</span>
-          <span class="font-bold text-sm">סט כשר בסיסי</span>
-        </div>
-        <span class="font-black text-amber-300 text-base">₪85</span>
-      </div>
-
-      <div class="flex items-center justify-between p-2.5 rounded-2xl bg-emerald-800/40 border border-emerald-400/40 shadow-xs">
-        <div class="flex items-center gap-2">
-          <span class="text-base">🌟</span>
-          <div>
-            <span class="font-extrabold text-sm text-white">סט מהודר</span>
-            <span class="text-[10px] text-amber-300 block font-normal">הכי מבוקש</span>
-          </div>
-        </div>
-        <span class="font-black text-amber-300 text-lg">₪160</span>
-      </div>
-
-      <div class="flex items-center justify-between p-2.5 rounded-2xl bg-white/10 border border-white/10">
-        <div class="flex items-center gap-2">
-          <span class="text-base">👑</span>
-          <span class="font-bold text-sm">סט פרימיום - מהודר מן המהודר</span>
-        </div>
-        <span class="font-black text-amber-300 text-base">₪270</span>
+    <!-- כפתור משלוחים עד הבית מרכזי -->
+    <div class="my-3">
+      <div class="inline-block w-full max-w-[280px] bg-[#9fc4af] text-stone-900 font-black text-lg py-1.5 px-6 rounded-full shadow-xs">
+        משלוחים עד הבית 🚚
       </div>
     </div>
 
-    <!-- מאפיינים ונוחות -->
-    <div class="grid grid-cols-3 gap-2 text-center text-[11px] text-emerald-100 relative z-10 mb-5 border-t border-b border-white/10 py-2.5">
-      <div>🚚 משלוח עד הבית</div>
-      <div>📱 תשלום ב-Bit</div>
-      <div>🏦 העברה בנקאית</div>
+    <!-- 2 עמודות: פירוט הסטים מול למה לקנות אצלנו (ללא מחירים) -->
+    <div class="grid grid-cols-2 gap-3 my-4 text-center">
+      
+      <!-- עמודה ימנית: מגוון הסטים -->
+      <div class="border-2 border-dashed border-[#86b59b] rounded-2xl p-3 flex flex-col justify-between">
+        <div class="bg-[#86b59b] text-white font-bold text-xs py-1 px-2 rounded-lg -mt-5 mx-auto mb-2 w-max">
+          מגוון הסטים לבחירה:
+        </div>
+        <div class="space-y-2.5 text-xs text-stone-800 font-bold py-1">
+          <div class="bg-stone-50 py-1.5 px-2 rounded-lg border border-stone-100">🌿 סט כשר בסיסי</div>
+          <div class="bg-stone-50 py-1.5 px-2 rounded-lg border border-stone-100">✨ סט מהודר</div>
+          <div class="bg-stone-50 py-1.5 px-2 rounded-lg border border-stone-100">👑 סט פרימיום</div>
+          <div class="text-[11px] text-[#426b53] font-extrabold pt-1">מגוון נוסחים לפי מנהג!</div>
+        </div>
+      </div>
+
+      <!-- עמודה שמאלית: למה לקנות אצלנו -->
+      <div class="border-2 border-dashed border-[#86b59b] rounded-2xl p-3 flex flex-col justify-between">
+        <div class="bg-[#86b59b] text-white font-bold text-xs py-1 px-2 rounded-lg -mt-5 mx-auto mb-2 w-max">
+          למה לקנות אצלנו?
+        </div>
+        <div class="space-y-1.5 text-[11px] text-stone-700 leading-snug py-1">
+          <p class="font-semibold">סטים כשרים ומהודרים שנבחרו ונבדקו בקפידה</p>
+          <p class="font-semibold">מגוון אתרוגים: תימני, מרוקאי, חזון איש ועוד</p>
+          <p class="font-semibold">הדסים משולשים א"א וערבות מובחרות ורעננות</p>
+        </div>
+      </div>
+
     </div>
 
-    <!-- יצירת קשר והזמנות -->
-    <div class="text-center relative z-10 space-y-1 bg-amber-400/10 p-3 rounded-2xl border border-amber-400/30">
-      <span class="text-xs text-amber-200 block font-bold">להזמנות ישירות בוואטסאפ:</span>
-      <div class="text-2xl font-black text-white font-mono tracking-wider">053-9621454</div>
-      <span class="text-[11px] text-emerald-200 block">או דרך האתר המקוון</span>
+    <!-- תוספות וציוד משלים (ללא מחירים) -->
+    <div class="my-4">
+      <div class="inline-block bg-[#86b59b] text-white font-bold text-xs py-1 px-4 rounded-lg mb-2">
+        תוספות וציוד משלים:
+      </div>
+      <div class="grid grid-cols-4 gap-1.5 text-center text-[11px] font-bold text-stone-800">
+        <div class="bg-[#eaf3ee] py-1.5 rounded-xl">קופסה לאתרוג</div>
+        <div class="bg-[#eaf3ee] py-1.5 rounded-xl">נרתיק ללולב</div>
+        <div class="bg-[#eaf3ee] py-1.5 rounded-xl">שקית ערבות</div>
+        <div class="bg-[#eaf3ee] py-1.5 rounded-xl">טבעות קשירה</div>
+      </div>
+    </div>
+
+    <!-- פרטי קנייה במקום וכתובת -->
+    <div class="bg-[#f2f8f4] p-3 rounded-2xl border border-[#cbe2d4] my-3 text-stone-800">
+      <div class="font-black text-sm text-[#27593c] flex items-center justify-center gap-1.5 mb-1">
+        <span>📍</span> אפשרות לקנייה ובחירה במקום!
+      </div>
+      <div class="font-extrabold text-sm text-stone-900">
+        ירושלים, רמות ג' • בית כנסת עטרת מלכות
+      </div>
+    </div>
+
+    <!-- קישור לאתר והזמנות -->
+    <div class="pt-2 border-t border-stone-200">
+      <div class="text-xs font-bold text-stone-600 mb-1">להזמנה אונליין, צפייה במחירון המלא ותשלום ב-Bit / העברה:</div>
+      <div class="text-sm font-black text-[#27593c] underline tracking-tight dir-ltr font-mono mb-2">
+        hilaatali.github.io/arbaat-haminim
+      </div>
+      
+      <div class="bg-stone-900 text-white py-2 px-4 rounded-xl flex items-center justify-center gap-2">
+        <span class="text-xs font-medium">לפרטים והזמנות בוואטסאפ:</span>
+        <span class="text-base font-black font-mono tracking-wider text-amber-300">053-9621454</span>
+      </div>
     </div>
 
   </div>
 
   <script>
-    function downloadPoster() {
-      const poster = document.getElementById('posterCard');
-      html2canvas(poster, { scale: 3 }).then(canvas => {
+    function downloadFlyer() {
+      const flyer = document.getElementById('flyerCard');
+      html2canvas(flyer, { scale: 3 }).then(canvas => {
         const link = document.createElement('a');
-        link.download = 'arbaat-haminim-poster.png';
+        link.download = 'arbaat-haminim-flyer.png';
         link.href = canvas.toDataURL('image/png');
         link.click();
       });
