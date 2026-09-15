@@ -15,67 +15,48 @@
 </head>
 <body class="bg-[#f4faf5] text-stone-800 min-h-screen pb-16">
 
-  <!-- מספר וואטסאפ מוגדר -->
+  <!-- הגדרות תשלום וטלפון -->
   <script>
     const MY_WHATSAPP_PHONE = "972539621454";
+    const MY_BIT_PHONE = "0539621454";
   </script>
 
-  <!-- באנר עליון עם איור עשיר של ארבעת המינים בגוון ירוק-יער עמוק עם פסטל -->
+  <!-- באנר עליון עם איור ארבעת המינים -->
   <header class="relative bg-gradient-to-b from-[#1b3d2b] via-[#2d573e] to-[#f4faf5] text-white pt-12 pb-16 px-4 shadow-sm overflow-hidden text-center">
     <div class="max-w-2xl mx-auto relative z-10 space-y-4">
       
-      <!-- איור מרכזי מדויק של ארבעת המינים -->
+      <!-- איור ארבעת המינים המדויק -->
       <div class="w-32 h-40 mx-auto bg-white/10 backdrop-blur-md rounded-3xl p-2 border border-emerald-300/30 shadow-lg flex items-center justify-center">
         <svg viewBox="0 0 160 220" class="w-full h-full drop-shadow-md">
-          <!-- לולב ישר במרכז -->
           <line x1="80" y1="210" x2="80" y2="8" stroke="#256e29" stroke-width="7" stroke-linecap="round"/>
           <line x1="79" y1="8" x2="79" y2="210" stroke="#184e1b" stroke-width="2"/>
 
-          <!-- ערבות משמאל: ענף חום-אדמדם עם עלים ארוכים, צרים ומחודדים -->
-          <!-- ענף ערבה 1 -->
+          <!-- ערבות משמאל -->
           <path d="M72 195 Q52 130 45 40" stroke="#8d5b4c" stroke-width="2.5" fill="none"/>
           <path d="M45 40 C35 55 35 75 48 90" fill="#7cb342" stroke="#689f38" stroke-width="0.8"/>
           <path d="M49 85 C30 100 28 125 55 135" fill="#8bc34a" stroke="#689f38" stroke-width="0.8"/>
           <path d="M56 130 C32 145 35 168 62 172" fill="#7cb342" stroke="#689f38" stroke-width="0.8"/>
 
-          <!-- ענף ערבה 2 (גבוה משמאל) -->
           <path d="M76 195 Q60 110 58 15" stroke="#795548" stroke-width="2" fill="none"/>
           <path d="M58 15 C50 30 52 48 62 60" fill="#8bc34a" stroke="#689f38" stroke-width="0.8"/>
           <path d="M62 60 C48 78 50 102 66 112" fill="#7cb342" stroke="#689f38" stroke-width="0.8"/>
           <path d="M66 110 C52 130 55 152 70 160" fill="#8bc34a" stroke="#689f38" stroke-width="0.8"/>
 
-          <!-- הדסים מימין: שני ענפים עציים עם עלים קטנים בשלשות (משולש) -->
-          <!-- ענף הדס 1 (ימני חיצוני) -->
+          <!-- הדסים מימין בשלשות צפופות -->
           <line x1="108" y1="195" x2="115" y2="45" stroke="#4e342e" stroke-width="2.5"/>
-          <!-- שלשות עלים קטנים וצפופים לאורך הענף -->
           <g fill="#1b5e20" stroke="#0d3b11" stroke-width="0.7">
-            <!-- קומה 1 עליונה -->
             <path d="M115 45 C111 40 107 43 111 50 Z"/>
             <path d="M115 45 C119 40 123 43 119 50 Z"/>
-            <path d="M115 45 C115 39 116 39 115 49 Z"/>
-
-            <!-- קומה 2 -->
             <path d="M114 62 C108 57 104 61 109 69 Z"/>
             <path d="M114 62 C120 57 124 61 119 69 Z"/>
-            <path d="M114 62 C114 55 115 55 114 68 Z"/>
-
-            <!-- קומה 3 -->
             <path d="M113 80 C106 74 102 79 107 88 Z"/>
             <path d="M113 80 C120 74 124 79 119 88 Z"/>
-            <path d="M113 80 C113 72 114 72 113 87 Z"/>
-
-            <!-- קומה 4 -->
             <path d="M111 100 C103 93 99 99 105 109 Z"/>
             <path d="M111 100 C119 93 123 99 117 109 Z"/>
-            <path d="M111 100 C111 91 112 91 111 108 Z"/>
-
-            <!-- קומה 5 -->
             <path d="M110 122 C101 114 97 121 103 132 Z"/>
             <path d="M110 122 C119 114 123 121 117 132 Z"/>
-            <path d="M110 122 C110 112 111 112 110 131 Z"/>
           </g>
 
-          <!-- ענף הדס 2 (פנימי קרוב ללולב) -->
           <line x1="94" y1="195" x2="96" y2="70" stroke="#4e342e" stroke-width="2"/>
           <g fill="#2e7d32" stroke="#1b5e20" stroke-width="0.7">
             <path d="M96 72 C91 66 87 70 92 78 Z"/>
@@ -86,18 +67,15 @@
             <path d="M94 110 C101 102 105 108 98 118 Z"/>
           </g>
 
-          <!-- אתרוג במרכז: צהוב עשיר, צורה אגסית מדויקת, חוטם ופיטם -->
+          <!-- אתרוג צהוב במרכז -->
           <g>
             <path d="M80 118 C83 126 90 138 98 152 C108 168 106 190 92 201 C78 212 58 208 51 192 C45 178 48 160 58 145 C67 131 77 125 80 118 Z" 
                   fill="#ffd600" stroke="#e6b800" stroke-width="1.8"/>
-            <!-- מרקם גבשושי וצל טבעי -->
             <path d="M53 186 C49 174 51 159 60 147 C67 136 75 127 79 120" stroke="#fff9c4" stroke-width="2.5" fill="none"/>
             <circle cx="72" cy="168" r="1.2" fill="#f57f17"/>
             <circle cx="80" cy="158" r="1.4" fill="#f57f17"/>
             <circle cx="88" cy="172" r="1.2" fill="#f57f17"/>
             <circle cx="66" cy="182" r="1.4" fill="#f57f17"/>
-            <circle cx="82" cy="190" r="1.2" fill="#f57f17"/>
-            <!-- פיטם שחום עם עוקץ קטן -->
             <circle cx="80" cy="116" r="2.8" fill="#4e342e"/>
             <line x1="80" y1="116" x2="80" y2="110" stroke="#3e2723" stroke-width="2" stroke-linecap="round"/>
           </g>
@@ -137,7 +115,6 @@
           <!-- סט כשר בסיסי -->
           <div class="p-3.5 rounded-2xl border border-emerald-100 bg-[#fbfdfb] flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition hover:border-emerald-300">
             <div class="flex items-center gap-3">
-              <!-- תמונת סט ארבעת המינים המדויקת -->
               <div class="w-14 h-14 rounded-2xl bg-white border border-emerald-200 p-1 flex items-center justify-center shrink-0 shadow-2xs">
                 <svg viewBox="0 0 160 220" class="w-full h-full">
                   <line x1="80" y1="210" x2="80" y2="8" stroke="#256e29" stroke-width="7" stroke-linecap="round"/>
@@ -150,12 +127,9 @@
                     <path d="M115 45 C119 40 123 43 119 50 Z"/>
                     <path d="M114 65 C108 60 104 64 109 72 Z"/>
                     <path d="M114 65 C120 60 124 64 119 72 Z"/>
-                    <path d="M112 88 C105 82 101 87 106 96 Z"/>
-                    <path d="M112 88 C119 82 123 87 118 96 Z"/>
                   </g>
                   <path d="M80 118 C83 126 90 138 98 152 C108 168 106 190 92 201 C78 212 58 208 51 192 C45 178 48 160 58 145 C67 131 77 125 80 118 Z" fill="#ffd600" stroke="#e6b800" stroke-width="1.8"/>
                   <circle cx="80" cy="116" r="2.8" fill="#4e342e"/>
-                  <line x1="80" y1="116" x2="80" y2="110" stroke="#3e2723" stroke-width="2" stroke-linecap="round"/>
                 </svg>
               </div>
               <div>
@@ -192,12 +166,9 @@
                     <path d="M115 45 C119 40 123 43 119 50 Z"/>
                     <path d="M114 65 C108 60 104 64 109 72 Z"/>
                     <path d="M114 65 C120 60 124 64 119 72 Z"/>
-                    <path d="M112 88 C105 82 101 87 106 96 Z"/>
-                    <path d="M112 88 C119 82 123 87 118 96 Z"/>
                   </g>
                   <path d="M80 118 C83 126 90 138 98 152 C108 168 106 190 92 201 C78 212 58 208 51 192 C45 178 48 160 58 145 C67 131 77 125 80 118 Z" fill="#ffd600" stroke="#e6b800" stroke-width="1.8"/>
                   <circle cx="80" cy="116" r="2.8" fill="#4e342e"/>
-                  <line x1="80" y1="116" x2="80" y2="110" stroke="#3e2723" stroke-width="2" stroke-linecap="round"/>
                 </svg>
               </div>
               <div>
@@ -231,12 +202,9 @@
                     <path d="M115 45 C119 40 123 43 119 50 Z"/>
                     <path d="M114 65 C108 60 104 64 109 72 Z"/>
                     <path d="M114 65 C120 60 124 64 119 72 Z"/>
-                    <path d="M112 88 C105 82 101 87 106 96 Z"/>
-                    <path d="M112 88 C119 82 123 87 118 96 Z"/>
                   </g>
                   <path d="M80 118 C83 126 90 138 98 152 C108 168 106 190 92 201 C78 212 58 208 51 192 C45 178 48 160 58 145 C67 131 77 125 80 118 Z" fill="#ffd600" stroke="#e6b800" stroke-width="1.8"/>
                   <circle cx="80" cy="116" r="2.8" fill="#4e342e"/>
-                  <line x1="80" y1="116" x2="80" y2="110" stroke="#3e2723" stroke-width="2" stroke-linecap="round"/>
                 </svg>
               </div>
               <div>
@@ -279,7 +247,7 @@
         </div>
       </section>
 
-      <!-- שלב 2: תוספות עם התמונות המדויקות שלך -->
+      <!-- שלב 2: תוספות עם התמונות המדויקות -->
       <section class="bg-white rounded-3xl p-6 shadow-xs border border-emerald-100/80">
         <div class="flex items-center gap-3 pb-4 mb-4 border-b border-emerald-50">
           <span class="w-8 h-8 rounded-full bg-emerald-700 text-white font-bold text-sm flex items-center justify-center shadow-xs">2</span>
@@ -382,12 +350,9 @@
                     <path d="M22 60 A11 11 0 1 1 34 71"/>
                     <path d="M68 65 A12 12 0 1 1 82 76"/>
                     <path d="M50 78 A10 10 0 1 1 62 87"/>
-                    <path d="M38 18 A10 10 0 1 1 50 26"/>
-                    <path d="M72 45 A10 10 0 1 1 84 53"/>
                   </g>
                   <g stroke="#ffd700" stroke-width="2" fill="none">
                     <circle cx="48" cy="48" r="10" stroke-dasharray="14 4"/>
-                    <circle cx="68" cy="63" r="9" stroke-dasharray="12 4"/>
                   </g>
                 </svg>
               </div>
@@ -462,7 +427,7 @@
 
     </div>
 
-    <!-- עמודת סיכום סל (דביקה) -->
+    <!-- עמודת סיכום סל ותשלומים (דביקה) -->
     <div class="lg:col-span-4">
       <div class="bg-white rounded-3xl p-5 shadow-sm border-2 border-emerald-200 sticky top-6">
         <div class="flex items-center justify-between border-b border-emerald-100 pb-3 mb-3">
@@ -472,8 +437,8 @@
           <span id="badgeTotalItems" class="text-xs font-semibold bg-emerald-100 text-emerald-800 px-2.5 py-0.5 rounded-full">0 פריטים</span>
         </div>
 
-        <div id="basketList" class="space-y-2 text-xs max-h-48 overflow-y-auto mb-3 divide-y divide-emerald-50">
-          <div class="text-stone-400 text-center py-6">הסל שלך ריק עדיין</div>
+        <div id="basketList" class="space-y-2 text-xs max-h-40 overflow-y-auto mb-3 divide-y divide-emerald-50">
+          <div class="text-stone-400 text-center py-5">הסל שלך ריק עדיין</div>
         </div>
 
         <div class="space-y-1.5 border-t border-emerald-100 pt-3 text-xs text-stone-500">
@@ -499,17 +464,85 @@
           <span id="grandTotal" class="text-2xl font-extrabold text-emerald-800 price-tag">₪0</span>
         </div>
 
-        <!-- כפתור שליחה לוואטסאפ -->
-        <button onclick="sendOrderToWhatsApp()" class="w-full mt-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-4 rounded-2xl shadow-sm transition flex items-center justify-center gap-2 text-sm">
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-          </svg>
-          שליחת הזמנה לוואטסאפ
-        </button>
+        <!-- כפתורי פעולה: שליחה לוואטסאפ ואפשרויות תשלום -->
+        <div class="mt-4 space-y-2">
+          
+          <!-- 1. כפתור שליחה לוואטסאפ -->
+          <button onclick="sendOrderToWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-4 rounded-2xl shadow-sm transition flex items-center justify-center gap-2 text-sm">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+            שליחת הזמנה לוואטסאפ
+          </button>
+
+          <!-- 2. כפתור תשלום ב-Bit -->
+          <button onclick="payWithBit()" class="w-full bg-[#0089e6] hover:bg-[#007acc] text-white font-bold py-3 px-4 rounded-2xl shadow-sm transition flex items-center justify-center gap-2 text-sm">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5h-2v-2h2v2zm0-4h-2V7h2v5.5z"/>
+            </svg>
+            <span>תשלום מהיר ב-Bit</span>
+          </button>
+
+          <!-- 3. כפתור העברה בנקאית -->
+          <button onclick="openBankModal()" class="w-full bg-white hover:bg-stone-50 text-stone-700 border border-stone-300 font-bold py-2.5 px-4 rounded-2xl shadow-2xs transition flex items-center justify-center gap-2 text-xs">
+            <svg class="w-4 h-4 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/>
+            </svg>
+            <span>פרטי העברה בנקאית</span>
+          </button>
+
+        </div>
       </div>
     </div>
 
   </main>
+
+  <!-- חלונית פרטי העברה בנקאית (Modal) -->
+  <div id="bankModal" class="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-3xl p-6 max-w-sm w-full shadow-2xl border border-emerald-100 text-center relative">
+      <button onclick="closeBankModal()" class="absolute top-4 left-4 text-stone-400 hover:text-stone-600 font-bold text-lg">✕</button>
+      
+      <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-xl mx-auto mb-3">
+        🏦
+      </div>
+      
+      <h3 class="font-extrabold text-base text-stone-900 mb-1">פרטים להעברה בנקאית</h3>
+      <p class="text-xs text-stone-500 mb-4">נא לבצע את ההעברה ולשלוח אישור בוואטסאפ</p>
+
+      <div class="bg-[#f4faf5] p-3.5 rounded-2xl border border-emerald-200/70 text-right text-xs space-y-2 mb-4 font-mono">
+        <div class="flex justify-between">
+          <span class="text-stone-500 font-sans">בנק:</span>
+          <span class="font-bold text-stone-800" id="bankName">שם הבנק</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-stone-500 font-sans">מספר סניף:</span>
+          <span class="font-bold text-stone-800" id="bankBranch">000</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-stone-500 font-sans">מספר חשבון:</span>
+          <span class="font-bold text-stone-800" id="bankAccount">000000</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-stone-500 font-sans">שם המוטב:</span>
+          <span class="font-bold text-stone-800" id="bankOwner">שם בעל החשבון</span>
+        </div>
+        <div class="flex justify-between pt-1 border-t border-emerald-200">
+          <span class="text-stone-500 font-sans">סכום להעברה:</span>
+          <span class="font-black text-emerald-800 font-mono text-sm" id="bankAmount">₪0</span>
+        </div>
+      </div>
+
+      <div class="flex gap-2">
+        <button onclick="copyBankDetails()" class="flex-1 bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-2.5 rounded-xl text-xs transition">
+          העתק פרטי חשבון
+        </button>
+        <button onclick="closeBankModal()" class="bg-stone-100 hover:bg-stone-200 text-stone-600 font-bold py-2.5 px-4 rounded-xl text-xs transition">
+          סגור
+        </button>
+      </div>
+      <div id="copyAlert" class="text-[11px] text-emerald-700 font-bold mt-2 hidden">הפרטים הועתקו ללוח בהצלחה!</div>
+    </div>
+  </div>
 
   <script>
     const items = {
@@ -527,6 +560,7 @@
     };
 
     let isDelivery = false;
+    let currentGrandTotal = 0;
 
     function updateQty(group, key, delta) {
       const target = group === 'set' ? items.sets[key] : items.addons[key];
@@ -569,15 +603,16 @@
       }
 
       if (totalCount === 0) {
-        basketList.innerHTML = `<div class="text-stone-400 text-center py-6">הסל שלך ריק עדיין</div>`;
+        basketList.innerHTML = `<div class="text-stone-400 text-center py-5">הסל שלך ריק עדיין</div>`;
       }
 
       const deliveryPrice = isDelivery ? 35 : 0;
-      const grandTotal = setsTotal + addonsTotal + deliveryPrice;
+      currentGrandTotal = setsTotal + addonsTotal + deliveryPrice;
 
       document.getElementById('priceSets').textContent = `₪${setsTotal}`;
       document.getElementById('priceAddons').textContent = `₪${addonsTotal}`;
-      document.getElementById('grandTotal').textContent = `₪${grandTotal}`;
+      document.getElementById('grandTotal').textContent = `₪${currentGrandTotal}`;
+      document.getElementById('bankAmount').textContent = `₪${currentGrandTotal}`;
       document.getElementById('badgeTotalItems').textContent = `${totalCount} פריטים`;
     }
 
@@ -670,6 +705,39 @@
       const cleanPhone = MY_WHATSAPP_PHONE.replace(/\D/g, '');
       const url = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(text)}`;
       window.open(url, '_blank');
+    }
+
+    // פונקציית תשלום ב-Bit
+    function payWithBit() {
+      if (currentGrandTotal === 0) {
+        alert('אנא בחרו פריטים בסל לפני המעבר לתשלום ב-Bit.');
+        return;
+      }
+      // פתיחת אפליקציית ביט עם הסכום והטלפון
+      const bitUrl = `https://bitpay.co.il/app/pay?phone=${MY_BIT_PHONE}&amount=${currentGrandTotal}`;
+      window.open(bitUrl, '_blank');
+    }
+
+    // פונקציות העברה בנקאית
+    function openBankModal() {
+      document.getElementById('bankModal').classList.remove('hidden');
+    }
+
+    function closeBankModal() {
+      document.getElementById('bankModal').classList.add('hidden');
+      document.getElementById('copyAlert').classList.add('hidden');
+    }
+
+    function copyBankDetails() {
+      const bank = document.getElementById('bankName').textContent;
+      const branch = document.getElementById('bankBranch').textContent;
+      const acc = document.getElementById('bankAccount').textContent;
+      const owner = document.getElementById('bankOwner').textContent;
+      
+      const copyText = `פרטים להעברה בנקאית:\nבנק: ${bank}\nסניף: ${branch}\nחשבון: ${acc}\nמוטב: ${owner}\nסכום: ₪${currentGrandTotal}`;
+      navigator.clipboard.writeText(copyText).then(() => {
+        document.getElementById('copyAlert').classList.remove('hidden');
+      });
     }
   </script>
 </body>
