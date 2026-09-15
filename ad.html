@@ -11,9 +11,21 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <style>
     body { font-family: 'Assistant', sans-serif; }
+    .mint-badge {
+      background-color: #8fb39e;
+    }
+    .mint-light {
+      background-color: #f2f7f4;
+    }
+    .mint-border {
+      border-color: #8fb39e;
+    }
+    .mint-text {
+      color: #3b5c47;
+    }
   </style>
 </head>
-<body class="bg-stone-700 min-h-screen flex flex-col items-center justify-center p-3 py-6">
+<body class="bg-stone-800 min-h-screen flex flex-col items-center justify-center p-3 py-6">
 
   <!-- כפתור שמירה מהירה כתמונה -->
   <div class="mb-4">
@@ -25,41 +37,33 @@
     </button>
   </div>
 
-  <!-- דף המודעה המעוצב בדיוק לפי הדוגמה -->
-  <div id="flyerCard" class="w-full max-w-[460px] bg-white text-stone-900 rounded-2xl p-6 sm:p-7 shadow-2xl border border-stone-200 relative overflow-hidden">
+  <!-- מודעת הפרימיום המעוצבת -->
+  <div id="flyerCard" class="w-full max-w-[480px] bg-white text-stone-900 rounded-[28px] p-7 shadow-2xl border-2 border-stone-200 relative overflow-hidden flex flex-col justify-between">
 
-    <!-- חלק עליון: כותרת + תמונת ארבעת המינים -->
-    <div class="flex items-start justify-between gap-3 mb-2">
-      <div class="flex-1 text-center pt-1">
-        <h1 class="text-3xl sm:text-4xl font-black text-stone-900 leading-none mb-1">
+    <!-- חלק עליון: כותרת ואיור -->
+    <div class="flex items-start justify-between gap-2 mb-3">
+      <div class="flex-1 text-right pt-2">
+        <h1 class="text-4xl font-black text-stone-900 leading-none tracking-tight mb-1">
           מכירת
         </h1>
-        <h2 class="text-2xl sm:text-3xl font-black text-stone-900 leading-tight mb-2">
+        <h2 class="text-3xl font-black text-stone-900 leading-tight mb-2.5">
           ארבעת המינים
         </h2>
         
-        <!-- משיכת מברשת/תגית מנטה -->
-        <div class="inline-block bg-[#86b59b] text-white font-extrabold text-sm px-7 py-0.5 rounded-full shadow-xs mb-3">
+        <!-- תגית שנה בסגנון משיכת מכחול -->
+        <div class="inline-block mint-badge text-white font-black text-base px-8 py-1 rounded-full shadow-xs mb-3 transform -rotate-1">
           תשפ"ז
         </div>
 
-        <p class="text-stone-800 font-bold text-xs sm:text-[13px] leading-snug">
-          ממשיכים במסורת עם המארזים הכי איכותיים<br>
+        <p class="text-stone-800 font-bold text-xs sm:text-[13px] leading-relaxed">
+          ממשיכים במסורת עם המארזים הכי איכותיים,<br>
           ההכשרים הכי מהודרים ובמחירים הכי משתלמים!
         </p>
-
-        <!-- עיטור קו עדין מתחת לפסקה -->
-        <div class="flex items-center justify-center gap-2 text-[#86b59b] my-2 text-xs opacity-70">
-          <span>❖</span>
-          <div class="w-24 h-px bg-[#86b59b]"></div>
-          <span>❖</span>
-        </div>
       </div>
 
-      <!-- איור ארבעת המינים בצד שמאל בדיוק כמו בתמונה -->
-      <div class="w-24 sm:w-28 h-48 flex-shrink-0 flex items-center justify-center">
-        <svg viewBox="0 0 160 220" class="w-full h-full drop-shadow-xs">
-          <!-- לולב ישר -->
+      <!-- איור ארבעת המינים בצד שמאל -->
+      <div class="w-28 h-52 flex-shrink-0 flex items-center justify-center">
+        <svg viewBox="0 0 160 220" class="w-full h-full drop-shadow-sm">
           <line x1="80" y1="210" x2="80" y2="8" stroke="#256e29" stroke-width="6" stroke-linecap="round"/>
           <line x1="79" y1="8" x2="79" y2="210" stroke="#184e1b" stroke-width="2"/>
 
@@ -86,7 +90,7 @@
             <path d="M111 100 C119 93 123 99 117 109 Z"/>
           </g>
 
-          <!-- אתרוג צהוב בוהק -->
+          <!-- אתרוג -->
           <path d="M80 118 C83 126 90 138 98 152 C108 168 106 190 92 201 C78 212 58 208 51 192 C45 178 48 160 58 145 C67 131 77 125 80 118 Z" fill="#ffd600" stroke="#e6b800" stroke-width="1.8"/>
           <circle cx="80" cy="116" r="2.8" fill="#4e342e"/>
           <line x1="80" y1="116" x2="80" y2="110" stroke="#3e2723" stroke-width="2" stroke-linecap="round"/>
@@ -94,38 +98,45 @@
       </div>
     </div>
 
-    <!-- כפתור איסוף עצמי וקנייה במקום -->
-    <div class="text-center my-2">
-      <div class="inline-block w-full max-w-[280px] bg-[#9fc4af] text-stone-900 font-extrabold text-sm py-1.5 px-4 rounded-full shadow-2xs">
-        אפשרות קנייה ובחירה במקום
+    <!-- קו הפרדה אלגנטי -->
+    <div class="flex items-center justify-center gap-3 my-1 mint-text opacity-50">
+      <span>✦</span>
+      <div class="w-32 h-0.5 mint-badge rounded-full"></div>
+      <span>✦</span>
+    </div>
+
+    <!-- כפתור מרכזי: קנייה במקום ואיסוף עצמי -->
+    <div class="text-center my-3">
+      <div class="inline-block w-full max-w-[340px] mint-badge text-white font-black text-sm sm:text-base py-2.5 px-6 rounded-full shadow-md tracking-wide">
+        הקניה במקום ויש אפשרות להזמנה ואיסוף עצמי
       </div>
     </div>
 
-    <!-- שתי מסגרות מקווקוות -->
-    <div class="grid grid-cols-2 gap-3 my-3">
+    <!-- שתי מסגרות מקווקוות מעוצבות -->
+    <div class="grid grid-cols-2 gap-3.5 my-3">
       
       <!-- מסגרת ימנית: סוגי הסטים -->
-      <div class="border border-stone-400 rounded-xl p-2.5 flex flex-col justify-start relative text-center">
-        <div class="bg-[#86b59b] text-white font-bold text-xs py-0.5 px-3 rounded-md -mt-4 mx-auto mb-2 w-max">
-          מגוון הסטים:
+      <div class="border-2 border-dashed mint-border rounded-2xl p-3 flex flex-col justify-start relative text-center bg-stone-50/50">
+        <div class="mint-badge text-white font-extrabold text-xs py-1 px-4 rounded-xl -mt-5 mx-auto mb-2 w-max shadow-xs">
+          מגוון הסטים
         </div>
-        <div class="space-y-1.5 text-xs font-bold text-stone-800 py-1">
-          <div class="border-b border-stone-100 pb-1">סט רגיל (כשר למהדרין)</div>
-          <div class="border-b border-stone-100 pb-1">סט מהודר</div>
-          <div class="border-b border-stone-100 pb-1">סט פרימיום</div>
-          <div class="text-[11px] text-[#2c523c] pt-0.5">נוסח: תימני / מרוקאי</div>
+        <div class="space-y-2 text-xs font-bold text-stone-800 py-1">
+          <div class="border-b border-stone-200/80 pb-1.5">סט רגיל (כשר למהדרין)</div>
+          <div class="border-b border-stone-200/80 pb-1.5">סט מהודר</div>
+          <div class="border-b border-stone-200/80 pb-1.5">סט פרימיום</div>
+          <div class="text-[11px] mint-text font-black pt-0.5">נוסח: תימני / מרוקאי</div>
         </div>
       </div>
 
       <!-- מסגרת שמאלית: למה לקנות אצלנו? -->
-      <div class="border border-stone-400 rounded-xl p-2.5 flex flex-col justify-start relative text-center">
-        <div class="bg-[#86b59b] text-white font-bold text-xs py-0.5 px-3 rounded-md -mt-4 mx-auto mb-2 w-max">
+      <div class="border-2 border-dashed mint-border rounded-2xl p-3 flex flex-col justify-start relative text-center bg-stone-50/50">
+        <div class="mint-badge text-white font-extrabold text-xs py-1 px-4 rounded-xl -mt-5 mx-auto mb-2 w-max shadow-xs">
           למה לקנות אצלנו?
         </div>
-        <div class="space-y-1.5 text-[11px] text-stone-700 font-medium py-1 leading-tight">
-          <p class="font-bold text-stone-900">סטים כשרים ומהודרים שנבחרו בקפידה</p>
-          <p>מגוון אתרוגים כולל תימנים / מרוקאיים יפים ומהודרים</p>
-          <p>הדסים משולשים א"א בהכשרים מעולים</p>
+        <div class="space-y-1.5 text-[11px] text-stone-700 font-semibold py-1 leading-snug text-right pr-1">
+          <p class="font-black text-stone-900">• סטים כשרים ומהודרים שנבחרו בקפידה</p>
+          <p>• מגוון אתרוגים כולל תימנים / מרוקאיים יפים ומהודרים</p>
+          <p>• הדסים משולשים א"א בהכשרים מעולים</p>
         </div>
       </div>
 
@@ -133,50 +144,50 @@
 
     <!-- תוספות וציוד משלים -->
     <div class="text-center my-3">
-      <div class="inline-block bg-[#86b59b] text-white font-bold text-xs py-0.5 px-4 rounded-md mb-2">
+      <div class="inline-block mint-badge text-white font-black text-xs py-1 px-5 rounded-xl mb-2.5 shadow-xs">
         תוספות וציוד משלים
       </div>
-      <div class="grid grid-cols-4 gap-1 text-center">
-        <div>
-          <span class="text-[9px] font-bold text-stone-700 block mb-0.5">קופסה לאתרוג</span>
-          <div class="bg-[#9fc4af] text-stone-900 font-bold text-[11px] py-1 rounded-full">קשיחה/מפוארת</div>
+      <div class="grid grid-cols-4 gap-1.5 text-center">
+        <div class="mint-light p-2 rounded-xl border border-emerald-100 flex flex-col justify-center">
+          <span class="text-[9px] font-bold text-stone-600 block mb-1">קופסה לאתרוג</span>
+          <span class="mint-text font-black text-xs">קשיחה/מפוארת</span>
         </div>
-        <div>
-          <span class="text-[9px] font-bold text-stone-700 block mb-0.5">נרתיק ללולב</span>
-          <div class="bg-[#9fc4af] text-stone-900 font-bold text-[11px] py-1 rounded-full">קשיח</div>
+        <div class="mint-light p-2 rounded-xl border border-emerald-100 flex flex-col justify-center">
+          <span class="text-[9px] font-bold text-stone-600 block mb-1">נרתיק ללולב</span>
+          <span class="mint-text font-black text-xs">קשיח</span>
         </div>
-        <div>
-          <span class="text-[9px] font-bold text-stone-700 block mb-0.5">נרתיק ללולב</span>
-          <div class="bg-[#9fc4af] text-stone-900 font-bold text-[11px] py-1 rounded-full">פשוט</div>
+        <div class="mint-light p-2 rounded-xl border border-emerald-200 flex flex-col justify-center">
+          <span class="text-[9px] font-bold text-stone-600 block mb-1">נרתיק ללולב</span>
+          <span class="mint-text font-black text-xs">פשוט</span>
         </div>
-        <div>
-          <span class="text-[9px] font-bold text-stone-700 block mb-0.5">ערבות</span>
-          <div class="bg-[#9fc4af] text-stone-900 font-bold text-[11px] py-1 rounded-full">הושענה רבה</div>
+        <div class="mint-light p-2 rounded-xl border border-emerald-100 flex flex-col justify-center">
+          <span class="text-[9px] font-bold text-stone-600 block mb-1">ערבות</span>
+          <span class="mint-text font-black text-xs">הושענה רבה</span>
         </div>
       </div>
     </div>
 
     <!-- כתובת האיסוף במקום -->
-    <div class="bg-[#f2f8f4] p-2.5 rounded-xl border border-[#cbe2d4] my-2.5 text-center">
-      <div class="font-black text-xs text-[#27593c] flex items-center justify-center gap-1 mb-0.5">
-        <span>📍</span> כתובת האיסוף:
+    <div class="mint-light p-3 rounded-2xl border mint-border my-2.5 text-center shadow-2xs">
+      <div class="font-black text-xs mint-text flex items-center justify-center gap-1.5 mb-0.5">
+        <span class="text-base">📍</span> כתובת האיסוף:
       </div>
-      <div class="font-extrabold text-xs sm:text-sm text-stone-900">
+      <div class="font-black text-sm sm:text-base text-stone-900 tracking-tight">
         ירושלים, רמות ג' • בית כנסת עטרת מלכות
       </div>
     </div>
 
     <!-- קישור לאתר ומספר הזמנות בתחתית -->
-    <div class="text-center pt-2 border-t border-stone-200">
-      <div class="text-[11px] font-bold text-stone-600 mb-0.5">להזמנה אונליין, מחירון ותשלום מהיר:</div>
-      <div class="text-xs font-black text-[#27593c] tracking-tight dir-ltr font-mono mb-2">
+    <div class="text-center pt-3 border-t-2 border-stone-100">
+      <div class="text-xs font-bold text-stone-600 mb-0.5">להזמנה אונליין, מחירון מלא ותשלום מהיר:</div>
+      <div class="text-sm font-black mint-text tracking-wider dir-ltr font-mono mb-2 bg-emerald-50 py-1 rounded-lg border border-emerald-100">
         tinyurl.com/arbaat-haminim
       </div>
 
       <div class="font-black text-sm text-stone-900">
-        לפרטים והזמנות - בוואטסאפ ובטלפון
+        לפרטים והזמנות - בוואטסאפ ובטלפון:
       </div>
-      <div class="text-xl font-black font-mono text-stone-900 tracking-wider mt-0.5">
+      <div class="text-2xl font-black font-mono text-stone-900 tracking-wider mt-0.5 mint-text">
         053-9621454
       </div>
     </div>
