@@ -12,22 +12,22 @@
   <style>
     body { font-family: 'Assistant', sans-serif; }
     
-    /* עיצוב הרקע בדיוק כמו המודעה ששלחת: קלף עתיק ומסגרת כפולה מוזהבת */
+    /* רקע קלף עתיק אלגנטי */
     .flyer-bg {
       background-color: #f7f3e8;
       background-image: 
-        radial-gradient(circle at center, #fbf8f0 0%, #f0e6d2 100%);
+        radial-gradient(circle at center, #fbf8f0 0%, #efe4ce 100%);
       box-shadow: inset 0 0 40px rgba(184, 134, 11, 0.15);
     }
     
-    /* מסגרת זהב חיצונית ופנימית */
+    /* מסגרת זהב כפולה */
     .gold-frame {
       border: 3px solid #b8860b;
       outline: 1px solid #d4af37;
       outline-offset: -7px;
     }
 
-    /* שלטי ירוק-יער עמוק עם מסגרת זהב */
+    /* באנרים ירוק-יער עמוק עם זהב */
     .forest-banner {
       background: linear-gradient(135deg, #0b3b24 0%, #124e31 100%);
       border: 2px solid #d4af37;
@@ -47,48 +47,48 @@
     </button>
   </div>
 
-  <!-- מודעה מעוצבת ברקע הקלף והזהב היוקרתי -->
-  <div id="flyerCard" class="w-full max-w-[480px] flyer-bg text-stone-900 rounded-[24px] p-7 gold-frame relative overflow-hidden flex flex-col justify-between">
+  <!-- מודעה מעוצבת ברקע הקלף והזהב היוקרתי עם ארבעת המינים -->
+  <div id="flyerCard" class="w-full max-w-[480px] flyer-bg text-stone-900 rounded-[24px] p-6 gold-frame relative overflow-hidden flex flex-col justify-between">
 
     <!-- חלק עליון: כותרת -->
-    <div class="text-center relative z-10 pt-2 mb-3">
-      <div class="text-stone-700 text-xs font-bold mb-2 tracking-widest">בס"ד</div>
+    <div class="text-center relative z-10 pt-1 mb-2">
+      <div class="text-stone-700 text-xs font-bold mb-1.5 tracking-widest">בס"ד</div>
       
       <!-- באנר ירוק עמוק לכותרת הראשית -->
-      <div class="forest-banner text-white rounded-2xl py-3 px-4 mb-3 shadow-md">
-        <h2 class="text-xl font-bold opacity-90 mb-0.5">תתקיים מכירה מוקדמת של</h2>
+      <div class="forest-banner text-white rounded-2xl py-2.5 px-4 mb-2.5 shadow-md">
+        <h2 class="text-lg font-bold opacity-90 mb-0.5">תתקיים מכירה מוקדמת של</h2>
         <h1 class="text-3xl sm:text-4xl font-black text-[#fde047] tracking-wide drop-shadow-sm">
           ארבעת המינים
         </h1>
-        <p class="text-base font-bold text-white mt-1">מהודרים במיוחד</p>
+        <p class="text-sm font-bold text-white mt-0.5">מהודרים במיוחד</p>
       </div>
 
-      <div class="inline-block bg-[#e6dcc3] text-stone-800 font-bold text-xs px-4 py-1 rounded-full border border-[#c5b596] mb-3">
+      <div class="inline-block bg-[#e6dcc3] text-stone-800 font-bold text-xs px-4 py-0.5 rounded-full border border-[#c5b596] mb-2">
         שנת תשפ"ז
       </div>
 
-      <p class="text-stone-800 font-semibold text-xs sm:text-[13px] leading-relaxed max-w-[380px] mx-auto">
+      <p class="text-stone-800 font-semibold text-xs sm:text-[12px] leading-relaxed max-w-[380px] mx-auto">
         מבחר סחורה איכותית, מהודרת ומבוקרת בקפידה,<br>
         במחירים מיוחדים!
       </p>
     </div>
 
     <!-- כפתור מרכזי -->
-    <div class="text-center my-2 relative z-10">
-      <div class="inline-block w-full max-w-[380px] bg-white/80 text-stone-900 font-bold text-xs sm:text-sm py-2 px-4 rounded-xl border border-[#b8860b]/40 shadow-xs">
+    <div class="text-center my-1.5 relative z-10">
+      <div class="inline-block w-full max-w-[360px] bg-white/80 text-stone-900 font-bold text-xs py-1.5 px-4 rounded-xl border border-[#b8860b]/40 shadow-xs">
         קניה במקום / הזמנה ואיסוף עצמי
       </div>
     </div>
 
     <!-- שתי מסגרות תוכן -->
-    <div class="grid grid-cols-2 gap-3 my-2.5 relative z-10">
+    <div class="grid grid-cols-2 gap-2.5 my-2 relative z-10">
       
       <!-- מסגרת ימנית: סוגי הסטים -->
-      <div class="border-2 border-[#b8860b]/40 rounded-xl p-2.5 flex flex-col justify-start text-center bg-white/70">
-        <div class="bg-[#0b3b24] text-white text-[11px] font-bold py-0.5 px-3 rounded-lg mx-auto mb-2 w-max">
+      <div class="border-2 border-[#b8860b]/40 rounded-xl p-2 flex flex-col justify-start text-center bg-white/70">
+        <div class="bg-[#0b3b24] text-white text-[10px] font-bold py-0.5 px-2.5 rounded-lg mx-auto mb-1.5 w-max">
           מגוון הסטים
         </div>
-        <div class="space-y-1.5 text-xs text-stone-800 py-0.5 font-medium">
+        <div class="space-y-1 text-[11px] text-stone-800 font-medium">
           <div class="border-b border-stone-200 pb-1">סט רגיל (כשר למהדרין)</div>
           <div class="border-b border-stone-200 pb-1">סט מהודר</div>
           <div class="border-b border-stone-200 pb-1">סט פרימיום</div>
@@ -97,11 +97,11 @@
       </div>
 
       <!-- מסגרת שמאלית: למה לקנות אצלנו? -->
-      <div class="border-2 border-[#b8860b]/40 rounded-xl p-2.5 flex flex-col justify-start text-center bg-white/70">
-        <div class="bg-[#0b3b24] text-white text-[11px] font-bold py-0.5 px-3 rounded-lg mx-auto mb-2 w-max">
+      <div class="border-2 border-[#b8860b]/40 rounded-xl p-2 flex flex-col justify-start text-center bg-white/70">
+        <div class="bg-[#0b3b24] text-white text-[10px] font-bold py-0.5 px-2.5 rounded-lg mx-auto mb-1.5 w-max">
           למה לקנות אצלנו?
         </div>
-        <div class="space-y-1 text-[10px] text-stone-700 py-0.5 leading-snug text-right pr-1 font-medium">
+        <div class="space-y-1 text-[10px] text-stone-700 leading-snug text-right pr-1 font-medium">
           <p>• סטים כשרים ומהודרים שנבחרו בקפידה</p>
           <p>• מגוון אתרוגים כולל תימנים / מרוקאיים יפים ומהודרים</p>
           <p>• הדסים משולשים א"א בהכשרים מעולים</p>
@@ -111,45 +111,77 @@
     </div>
 
     <!-- תוספות וציוד משלים -->
-    <div class="text-center my-2 relative z-10">
-      <div class="inline-block bg-[#0b3b24] text-white text-xs font-bold py-0.5 px-4 rounded-xl mb-2 shadow-xs">
+    <div class="text-center my-1.5 relative z-10">
+      <div class="inline-block bg-[#0b3b24] text-white text-[11px] font-bold py-0.5 px-3.5 rounded-xl mb-1.5 shadow-xs">
         תוספות וציוד משלים
       </div>
       <div class="grid grid-cols-4 gap-1 text-center">
-        <div class="bg-white/80 p-1.5 rounded-lg border border-[#b8860b]/30 flex flex-col justify-center">
-          <span class="text-[8px] text-stone-500 block mb-0.5">קופסה לאתרוג</span>
-          <span class="text-stone-900 font-bold text-[9px] leading-tight">קשיחה / מפוארת</span>
+        <div class="bg-white/80 p-1 rounded-lg border border-[#b8860b]/30 flex flex-col justify-center">
+          <span class="text-[7px] text-stone-500 block">קופסה לאתרוג</span>
+          <span class="text-stone-900 font-bold text-[8px] leading-tight">קשיחה / מפוארת</span>
         </div>
-        <div class="bg-white/80 p-1.5 rounded-lg border border-[#b8860b]/30 flex flex-col justify-center">
-          <span class="text-[8px] text-stone-500 block mb-0.5">נרתיק ללולב</span>
-          <span class="text-stone-900 font-bold text-[9px] leading-tight">קשיח</span>
+        <div class="bg-white/80 p-1 rounded-lg border border-[#b8860b]/30 flex flex-col justify-center">
+          <span class="text-[7px] text-stone-500 block">נרתיק ללולב</span>
+          <span class="text-stone-900 font-bold text-[8px] leading-tight">קשיח</span>
         </div>
-        <div class="bg-white/80 p-1.5 rounded-lg border border-[#b8860b]/30 flex flex-col justify-center">
-          <span class="text-[8px] text-stone-500 block mb-0.5">נרתיק ללולב</span>
-          <span class="text-stone-900 font-bold text-[9px] leading-tight">פשוט</span>
+        <div class="bg-white/80 p-1 rounded-lg border border-[#b8860b]/30 flex flex-col justify-center">
+          <span class="text-[7px] text-stone-500 block">נרתיק ללולב</span>
+          <span class="text-stone-900 font-bold text-[8px] leading-tight">פשוט</span>
         </div>
-        <div class="bg-white/80 p-1.5 rounded-lg border border-stone-200 flex flex-col justify-center">
-          <span class="text-[8px] text-stone-500 block mb-0.5">ערבות</span>
-          <span class="text-stone-900 font-bold text-[9px] leading-tight">הושענה רבה</span>
+        <div class="bg-white/80 p-1 rounded-lg border border-stone-200 flex flex-col justify-center">
+          <span class="text-[7px] text-stone-500 block">ערבות</span>
+          <span class="text-stone-900 font-bold text-[8px] leading-tight">הושענה רבה</span>
         </div>
+      </div>
+    </div>
+
+    <!-- איור ארבעת המינים המונח על משטח עץ (בדיוק כמו בתמונה) -->
+    <div class="my-2 relative z-10 flex justify-center items-center">
+      <div class="w-full h-24 bg-[#e8dac2] rounded-xl border border-[#b8860b]/30 shadow-inner overflow-hidden relative flex items-center justify-center p-2">
+        <!-- אפקט מרקם עץ ברקע -->
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#8d5b4c_1px,transparent_1px)] [background-size:12px_12px]"></div>
+        
+        <svg viewBox="0 0 320 90" class="w-full h-full drop-shadow-md relative z-10">
+          <!-- לולב שוכב עטוף -->
+          <path d="M 10 70 Q 70 45 160 30" stroke="#c2b280" stroke-width="14" fill="none" stroke-linecap="round"/>
+          <path d="M 15 68 Q 70 45 160 30" stroke="#1b4d1e" stroke-width="10" fill="none"/>
+          <!-- קשירת הלולב -->
+          <rect x="50" y="52" width="12" height="8" rx="2" fill="#d4af37" transform="rotate(-18 56 56)"/>
+          <rect x="62" y="49" width="10" height="7" rx="2" fill="#b8860b" transform="rotate(-18 67 52)"/>
+          
+          <!-- עלי לולב וערבות/הדסים משולבים -->
+          <g fill="#2e7d32">
+            <path d="M 155 30 L 305 10 L 310 13 L 158 35 Z"/>
+            <path d="M 140 32 L 290 18 L 293 21 L 143 37 Z"/>
+            <path d="M 120 35 L 270 25 L 273 28 L 123 40 Z"/>
+            <path d="M 100 40 L 250 35 L 252 38 L 103 44 Z"/>
+            <path d="M 80 44 L 230 42 L 232 45 L 83 48 Z"/>
+          </g>
+
+          <!-- אתרוג צהוב בוהק מונח מימין -->
+          <g transform="translate(235, 32)">
+            <path d="M25 15 C30 22 42 35 52 48 C60 58 55 72 42 78 C28 84 10 78 5 65 C0 52 8 38 18 25 C24 17 22 13 25 15 Z" fill="#ffd700" stroke="#cca100" stroke-width="1.5"/>
+            <!-- פיטם -->
+            <circle cx="26" cy="13" r="2.5" fill="#3e2723"/>
+            <line x1="26" y1="13" x2="26" y2="8" stroke="#3e2723" stroke-width="1.8" stroke-linecap="round"/>
+            <!-- ברק על האתרוג -->
+            <path d="M18 35 Q 25 30 32 38" stroke="#fff9c4" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </g>
+        </svg>
       </div>
     </div>
 
     <!-- כתובת האיסוף -->
-    <div class="bg-white/90 p-2.5 rounded-xl border border-[#b8860b]/40 my-2 text-center shadow-2xs">
-      <div class="text-[11px] text-stone-600 font-bold mb-0.5">
-        📍 כתובת האיסוף:
-      </div>
-      <div class="text-xs sm:text-sm font-black text-stone-900">
-        ירושלים, רמות ג' • בית כנסת עטרת מלכות
+    <div class="bg-white/90 p-2 rounded-xl border border-[#b8860b]/40 my-1 text-center shadow-2xs">
+      <div class="text-[10px] text-stone-600 font-bold">
+        📍 כתובת האיסוף: <span class="text-stone-900 font-black">ירושלים, רמות ג' • בית כנסת עטרת מלכות</span>
       </div>
     </div>
 
-    <!-- באנר תחתתי לירוק-יער עם פרטי קשר -->
-    <div class="forest-banner text-white p-3 rounded-2xl text-center relative z-10 shadow-md">
-      <div class="text-xs font-semibold text-[#fde047] mb-0.5">לפרטים, הזמנות ובירורים:</div>
-      <div class="text-sm font-bold text-white mb-0.5">אוריה אטלי</div>
-      <div class="text-xl font-black font-mono text-[#fde047] tracking-wider">
+    <!-- באנר תחתתי ירוק-יער עם פרטי קשר -->
+    <div class="forest-banner text-white p-2.5 rounded-2xl text-center relative z-10 shadow-md">
+      <div class="text-[11px] font-semibold text-[#fde047]">לפרטים, הזמנות ובירורים: <span class="text-white font-bold">אוריה אטלי</span></div>
+      <div class="text-lg font-black font-mono text-[#fde047] tracking-wider mt-0.5">
         053-9621454
       </div>
     </div>
