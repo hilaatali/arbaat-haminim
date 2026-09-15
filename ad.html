@@ -11,8 +11,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <style>
     body { font-family: 'Assistant', sans-serif; }
-    .mint-light { background-color: #f7fbf9; }
+    .mint-bg { background-color: #f2f7f4; }
+    .mint-badge { background-color: #8fb39e; }
     .mint-border { border-color: #a3c1b0; }
+    .mint-text { color: #3b5c47; }
   </style>
 </head>
 <body class="bg-stone-800 min-h-screen flex flex-col items-center justify-center p-3 py-6">
@@ -27,7 +29,7 @@
     </button>
   </div>
 
-  <!-- מודעה מעוצבת נקייה לחלוטין -->
+  <!-- מודעה מעוצבת בצבעים עדינים ונעימים -->
   <div id="flyerCard" class="w-full max-w-[480px] bg-white text-stone-900 rounded-[28px] p-7 shadow-2xl border-2 border-stone-200 relative overflow-hidden flex flex-col justify-between">
 
     <!-- חלק עליון: כותרת -->
@@ -51,9 +53,9 @@
       <div class="w-24 h-px bg-stone-300"></div>
     </div>
 
-    <!-- כפתור מרכזי -->
+    <!-- כפתור מרכזי מעוצב בעדינות -->
     <div class="text-center my-2.5 relative z-10">
-      <div class="inline-block w-full max-w-[360px] bg-stone-100 text-stone-800 font-normal text-xs sm:text-sm py-2 px-4 rounded-full border border-stone-300">
+      <div class="inline-block w-full max-w-[360px] mint-bg mint-text font-normal text-xs sm:text-sm py-2 px-4 rounded-full border mint-border">
         קניה במקום / הזמנה ואיסוף עצמי
       </div>
     </div>
@@ -62,21 +64,21 @@
     <div class="grid grid-cols-2 gap-3.5 my-3 relative z-10">
       
       <!-- מסגרת ימנית: סוגי הסטים -->
-      <div class="border border-stone-300 rounded-2xl p-3 flex flex-col justify-start relative text-center bg-stone-50/40">
-        <div class="bg-stone-200 text-stone-800 text-xs py-1 px-4 rounded-xl -mt-5 mx-auto mb-2 w-max">
+      <div class="border mint-border rounded-2xl p-3 flex flex-col justify-start relative text-center bg-stone-50/40">
+        <div class="mint-badge text-white text-xs py-1 px-4 rounded-xl -mt-5 mx-auto mb-2 w-max shadow-2xs">
           מגוון הסטים
         </div>
         <div class="space-y-2 text-xs text-stone-700 py-1">
           <div class="border-b border-stone-200 pb-1.5">סט רגיל (כשר למהדרין)</div>
           <div class="border-b border-stone-200 pb-1.5">סט מהודר</div>
           <div class="border-b border-stone-200 pb-1.5">סט פרימיום</div>
-          <div class="text-[11px] text-stone-600 pt-0.5">נוסח: תימני / מרוקאי</div>
+          <div class="text-[11px] mint-text pt-0.5">נוסח: תימני / מרוקאי</div>
         </div>
       </div>
 
       <!-- מסגרת שמאלית: למה לקנות אצלנו? -->
-      <div class="border border-stone-300 rounded-2xl p-3 flex flex-col justify-start relative text-center bg-stone-50/40">
-        <div class="bg-stone-200 text-stone-800 text-xs py-1 px-4 rounded-xl -mt-5 mx-auto mb-2 w-max">
+      <div class="border mint-border rounded-2xl p-3 flex flex-col justify-start relative text-center bg-stone-50/40">
+        <div class="mint-badge text-white text-xs py-1 px-4 rounded-xl -mt-5 mx-auto mb-2 w-max shadow-2xs">
           למה לקנות אצלנו?
         </div>
         <div class="space-y-1.5 text-[11px] text-stone-600 py-1 leading-snug text-right pr-1">
@@ -88,33 +90,33 @@
 
     </div>
 
-    <!-- תוספות וציוד משלים -->
+    <!-- תוספות וציוד משלים (מותאם שלא יחרוג מהריבועים) -->
     <div class="text-center my-3 relative z-10">
-      <div class="inline-block bg-stone-200 text-stone-800 text-xs py-1 px-5 rounded-xl mb-2.5">
+      <div class="inline-block mint-badge text-white text-xs py-1 px-5 rounded-xl mb-2.5 shadow-2xs">
         תוספות וציוד משלים
       </div>
-      <div class="grid grid-cols-4 gap-1.5 text-center">
-        <div class="mint-light p-2 rounded-xl border border-stone-200 flex flex-col justify-center">
-          <span class="text-[9px] text-stone-500 block mb-1">קופסה לאתרוג</span>
-          <span class="text-stone-800 text-xs">קשיחה/מפוארת</span>
+      <div class="grid grid-cols-4 gap-1 text-center">
+        <div class="mint-bg p-1.5 rounded-xl border mint-border flex flex-col justify-center">
+          <span class="text-[8px] text-stone-500 block mb-0.5">קופסה לאתרוג</span>
+          <span class="text-stone-800 text-[10px] leading-tight">קשיחה / מפוארת</span>
         </div>
-        <div class="mint-light p-2 rounded-xl border border-stone-200 flex flex-col justify-center">
-          <span class="text-[9px] text-stone-500 block mb-1">נרתיק ללולב</span>
-          <span class="text-stone-800 text-xs">קשיח</span>
+        <div class="mint-bg p-1.5 rounded-xl border mint-border flex flex-col justify-center">
+          <span class="text-[8px] text-stone-500 block mb-0.5">נרתיק ללולב</span>
+          <span class="text-stone-800 text-[10px] leading-tight">קשיח</span>
         </div>
-        <div class="mint-light p-2 rounded-xl border border-stone-200 flex flex-col justify-center">
-          <span class="text-[9px] text-stone-500 block mb-1">נרתיק ללולב</span>
-          <span class="text-stone-800 text-xs">פשוט</span>
+        <div class="mint-bg p-1.5 rounded-xl border mint-border flex flex-col justify-center">
+          <span class="text-[8px] text-stone-500 block mb-0.5">נרתיק ללולב</span>
+          <span class="text-stone-800 text-[10px] leading-tight">פשוט</span>
         </div>
-        <div class="mint-light p-2 rounded-xl border border-stone-200 flex flex-col justify-center">
-          <span class="text-[9px] text-stone-500 block mb-1">ערבות</span>
-          <span class="text-stone-800 text-xs">הושענה רבה</span>
+        <div class="mint-bg p-1.5 rounded-xl border mint-border flex flex-col justify-center">
+          <span class="text-[8px] text-stone-500 block mb-0.5">ערבות</span>
+          <span class="text-stone-800 text-[10px] leading-tight">הושענה רבה</span>
         </div>
       </div>
     </div>
 
     <!-- כתובת האיסוף במקום -->
-    <div class="mint-light p-3 rounded-2xl border border-stone-300 my-2 text-center relative z-10">
+    <div class="mint-bg p-3 rounded-2xl border mint-border my-2 text-center relative z-10">
       <div class="text-xs text-stone-600 mb-0.5">
         כתובת האיסוף:
       </div>
@@ -128,7 +130,7 @@
       <div class="text-sm text-stone-800">
         לפרטים והזמנות - אוריה אטלי:
       </div>
-      <div class="text-xl font-mono text-stone-900 tracking-wider mt-0.5">
+      <div class="text-xl font-mono text-stone-900 tracking-wider mt-0.5 mint-text">
         053-9621454
       </div>
     </div>
