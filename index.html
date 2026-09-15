@@ -3,248 +3,318 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>הזמנת ארבעת המינים</title>
+  <title>הזמנת ארבעת המינים המהודרים</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body { font-family: system-ui, -apple-system, sans-serif; background-color: #f8fafc; }
-    .price-num { font-variant-numeric: tabular-nums; }
+    body { font-family: 'Assistant', system-ui, sans-serif; }
+    .price-tag { font-variant-numeric: tabular-nums; }
   </style>
 </head>
-<body class="text-slate-800 pb-16">
+<body class="bg-stone-50 text-stone-800 min-h-screen pb-16">
 
-  <!-- הגדרת מספר וואטסאפ לקבלת הזמנות -->
+  <!-- מספר וואטסאפ מוגדר -->
   <script>
     const MY_WHATSAPP_PHONE = "972539621454";
   </script>
 
-  <!-- כותרת ראשית -->
-  <header class="bg-emerald-800 text-white py-6 px-4 shadow-md text-center">
-    <span class="text-3xl">🍋</span>
-    <h1 class="text-2xl font-black mt-1">טופס הזמנת ארבעת המינים</h1>
-    <p class="text-emerald-100 text-sm mt-1">בחרו סטים ותוספות ושלחו את ההזמנה ישירות לוואטסאפ</p>
+  <!-- באנר כותרת עליון יוקרתי -->
+  <header class="relative bg-gradient-to-b from-emerald-950 via-emerald-900 to-emerald-800 text-white pt-10 pb-16 px-4 shadow-lg overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10 space-y-3">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-700/60 text-emerald-200 text-xs font-semibold border border-emerald-500/30">
+        <span>✨</span> חג הסוכות • כשרות מהודרת ומפוקחת
+      </div>
+      <h1 class="text-3xl md:text-5xl font-black tracking-tight text-white">ארבעת המינים למהדרין</h1>
+      <p class="text-emerald-100 text-sm md:text-base max-w-xl mx-auto font-normal">
+        בחרו את רמת ההידור המתאימה לכם, הוסיפו אביזרים נלווים ושלחו את ההזמנה ישירות לוואטסאפ
+      </p>
+
+      <!-- כרטיסי ארבעת המינים המאוירים/מצולמים -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl mx-auto pt-6">
+        <div class="bg-emerald-900/60 backdrop-blur-md rounded-2xl p-3 border border-emerald-700/40 text-center">
+          <img src="https://images.unsplash.com/photo-1590502593747-42a996133562?w=400&auto=format&fit=crop&q=80" alt="אתרוג" class="w-14 h-14 mx-auto rounded-full object-cover shadow-sm mb-2 border-2 border-emerald-400/40">
+          <div class="font-bold text-sm text-amber-200">אתרוג מהודר</div>
+          <div class="text-[11px] text-emerald-200">נקי מכל מום</div>
+        </div>
+        <div class="bg-emerald-900/60 backdrop-blur-md rounded-2xl p-3 border border-emerald-700/40 text-center">
+          <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=400&auto=format&fit=crop&q=80" alt="לולב" class="w-14 h-14 mx-auto rounded-full object-cover shadow-sm mb-2 border-2 border-emerald-400/40">
+          <div class="font-bold text-sm text-emerald-200">לולב ישר</div>
+          <div class="text-[11px] text-emerald-200">תיומת סגורה</div>
+        </div>
+        <div class="bg-emerald-900/60 backdrop-blur-md rounded-2xl p-3 border border-emerald-700/40 text-center">
+          <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=400&auto=format&fit=crop&q=80" alt="הדס" class="w-14 h-14 mx-auto rounded-full object-cover shadow-sm mb-2 border-2 border-emerald-400/40">
+          <div class="font-bold text-sm text-emerald-200">הדס משולש</div>
+          <div class="text-[11px] text-emerald-200">עלים צפופים</div>
+        </div>
+        <div class="bg-emerald-900/60 backdrop-blur-md rounded-2xl p-3 border border-emerald-700/40 text-center">
+          <img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=400&auto=format&fit=crop&q=80" alt="ערבה" class="w-14 h-14 mx-auto rounded-full object-cover shadow-sm mb-2 border-2 border-emerald-400/40">
+          <div class="font-bold text-sm text-emerald-200">ערבות נחל</div>
+          <div class="text-[11px] text-emerald-200">טריות ומובחרות</div>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <main class="max-w-4xl mx-auto px-4 mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+  <!-- תוכן ראשי -->
+  <main class="max-w-5xl mx-auto px-4 -mt-8 relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-6">
 
-    <!-- עמודת טפסים ובחירת פריטים -->
-    <div class="md:col-span-2 space-y-6">
+    <!-- עמודת בחירה וטפסים -->
+    <div class="lg:col-span-8 space-y-6">
 
       <!-- שלב 1: בחירת סטים -->
-      <section class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
-        <h2 class="text-lg font-bold text-emerald-950 mb-3 border-b pb-2 flex items-center gap-2">
-          <span class="w-6 h-6 rounded-full bg-emerald-700 text-white text-xs flex items-center justify-center font-bold">1</span>
-          בחירת סטים
-        </h2>
-
-        <div class="space-y-3" id="setsContainer">
-          <!-- סט בסיסי -->
-          <div class="flex items-center justify-between p-3 rounded-xl border border-slate-200 hover:border-emerald-500 bg-slate-50/50">
+      <section class="bg-white rounded-3xl p-6 shadow-sm border border-stone-200">
+        <div class="flex items-center justify-between pb-4 mb-4 border-b border-stone-100">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-xl bg-emerald-800 text-white font-black text-sm flex items-center justify-center">1</span>
             <div>
-              <div class="font-bold">סט כשר בסיסי</div>
-              <div class="text-xs text-slate-500">כשר כהלכתו, מתאים לילדים ולציבור הרחב</div>
-              <div class="text-emerald-700 font-bold text-sm price-num">₪85</div>
+              <h2 class="text-lg font-black text-stone-900">בחירת רמת הידור לסט</h2>
+              <p class="text-xs text-stone-500">כל סט כולל: אתרוג, לולב, 3 הדסים משולשים ו-2 ערבות</p>
             </div>
-            <div class="flex items-center gap-2 bg-white p-1 rounded-lg border border-slate-300">
-              <button onclick="updateQty('set', 'basic', -1)" class="w-7 h-7 rounded bg-slate-100 font-bold hover:bg-slate-200">−</button>
-              <span id="qty-set-basic" class="w-6 text-center font-bold">0</span>
-              <button onclick="updateQty('set', 'basic', 1)" class="w-7 h-7 rounded bg-emerald-700 text-white font-bold hover:bg-emerald-800">+</button>
+          </div>
+          <span class="text-xs bg-emerald-50 text-emerald-800 font-bold px-3 py-1 rounded-full border border-emerald-200">מארז מלא</span>
+        </div>
+
+        <div class="space-y-4">
+          <!-- סט כשר -->
+          <div class="p-4 rounded-2xl border border-stone-200 bg-stone-50/60 flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition hover:border-emerald-400">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="font-bold text-stone-900">סט כשר בסיסי</span>
+                <span class="text-[11px] bg-stone-200 text-stone-700 font-semibold px-2 py-0.5 rounded-full">כשר לברכה</span>
+              </div>
+              <p class="text-xs text-stone-500 mt-1">כשר כהלכתו, נבדק ע"י רבנים, מתאים למתחילים ולילדים.</p>
+              <div class="text-emerald-800 font-black text-lg price-tag mt-1">₪85 <span class="text-xs font-normal text-stone-500">/ יחידה</span></div>
+            </div>
+            <div class="flex items-center gap-2 self-end sm:self-center bg-white px-2 py-1.5 rounded-xl border border-stone-300 shadow-sm">
+              <button onclick="updateQty('set', 'basic', -1)" class="w-8 h-8 rounded-lg bg-stone-100 hover:bg-stone-200 font-bold text-stone-700 transition">−</button>
+              <span id="qty-set-basic" class="w-8 text-center font-black text-base">0</span>
+              <button onclick="updateQty('set', 'basic', 1)" class="w-8 h-8 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white font-bold transition">+</button>
             </div>
           </div>
 
-          <!-- סט מהודר -->
-          <div class="flex items-center justify-between p-3 rounded-xl border-2 border-emerald-500/70 bg-emerald-50/30">
+          <!-- סט מהודר (בולט) -->
+          <div class="p-4 rounded-2xl border-2 border-emerald-600 bg-emerald-50/40 relative flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
+            <span class="absolute -top-3 left-6 bg-emerald-700 text-white text-[11px] font-bold px-3 py-0.5 rounded-full shadow-sm">
+              הכי פופולרי ✨
+            </span>
             <div>
-              <div class="font-bold text-emerald-950">סט מהודר ⭐</div>
-              <div class="text-xs text-slate-500">אתרוג נקי, לולב ישר וסגור, הדסים משולשים</div>
-              <div class="text-emerald-700 font-bold text-sm price-num">₪160</div>
+              <div class="flex items-center gap-2">
+                <span class="font-black text-emerald-950 text-base">סט מהודר</span>
+                <span class="text-[11px] bg-emerald-700 text-white font-bold px-2 py-0.5 rounded-full">מומלץ</span>
+              </div>
+              <p class="text-xs text-stone-600 mt-1">אתרוג נקי מנקודות, לולב סגור וישר בעל תיומת שלמה, הדסים משולשים.</p>
+              <div class="text-emerald-900 font-black text-lg price-tag mt-1">₪160 <span class="text-xs font-normal text-stone-500">/ יחידה</span></div>
             </div>
-            <div class="flex items-center gap-2 bg-white p-1 rounded-lg border border-emerald-300">
-              <button onclick="updateQty('set', 'mehudar', -1)" class="w-7 h-7 rounded bg-slate-100 font-bold hover:bg-slate-200">−</button>
-              <span id="qty-set-mehudar" class="w-6 text-center font-bold">0</span>
-              <button onclick="updateQty('set', 'mehudar', 1)" class="w-7 h-7 rounded bg-emerald-700 text-white font-bold hover:bg-emerald-800">+</button>
+            <div class="flex items-center gap-2 self-end sm:self-center bg-white px-2 py-1.5 rounded-xl border border-emerald-300 shadow-sm">
+              <button onclick="updateQty('set', 'mehudar', -1)" class="w-8 h-8 rounded-lg bg-stone-100 hover:bg-stone-200 font-bold text-stone-700 transition">−</button>
+              <span id="qty-set-mehudar" class="w-8 text-center font-black text-base">0</span>
+              <button onclick="updateQty('set', 'mehudar', 1)" class="w-8 h-8 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white font-bold transition">+</button>
             </div>
           </div>
 
           <!-- סט פרימיום -->
-          <div class="flex items-center justify-between p-3 rounded-xl border border-amber-300 bg-amber-50/30">
+          <div class="p-4 rounded-2xl border border-amber-300 bg-amber-50/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition hover:border-amber-400">
             <div>
-              <div class="font-bold text-amber-950">סט פרימיום (מהודר מן המהודר)</div>
-              <div class="text-xs text-slate-500">פיקוח קפדני, לולב כפתור, אתרוג מובחר</div>
-              <div class="text-amber-800 font-bold text-sm price-num">₪270</div>
+              <div class="flex items-center gap-2">
+                <span class="font-bold text-amber-950">סט פרימיום - מהודר מן המהודר</span>
+                <span class="text-[11px] bg-amber-200 text-amber-900 font-bold px-2 py-0.5 rounded-full">איכות עליונה</span>
+              </div>
+              <p class="text-xs text-stone-600 mt-1">בדיקה קפדנית, לולב כפתור סגור במיוחד, הדסים צפופים ואתרוג נקי לחלוטין.</p>
+              <div class="text-amber-900 font-black text-lg price-tag mt-1">₪270 <span class="text-xs font-normal text-stone-500">/ יחידה</span></div>
             </div>
-            <div class="flex items-center gap-2 bg-white p-1 rounded-lg border border-amber-300">
-              <button onclick="updateQty('set', 'premium', -1)" class="w-7 h-7 rounded bg-slate-100 font-bold hover:bg-slate-200">−</button>
-              <span id="qty-set-premium" class="w-6 text-center font-bold">0</span>
-              <button onclick="updateQty('set', 'premium', 1)" class="w-7 h-7 rounded bg-amber-700 text-white font-bold hover:bg-amber-800">+</button>
+            <div class="flex items-center gap-2 self-end sm:self-center bg-white px-2 py-1.5 rounded-xl border border-amber-300 shadow-sm">
+              <button onclick="updateQty('set', 'premium', -1)" class="w-8 h-8 rounded-lg bg-stone-100 hover:bg-stone-200 font-bold text-stone-700 transition">−</button>
+              <span id="qty-set-premium" class="w-8 text-center font-black text-base">0</span>
+              <button onclick="updateQty('set', 'premium', 1)" class="w-8 h-8 rounded-lg bg-amber-700 hover:bg-amber-800 text-white font-bold transition">+</button>
             </div>
           </div>
         </div>
 
-        <!-- העדפות נוסח ופיטם -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4 pt-3 border-t border-slate-100 text-xs">
+        <!-- בחירת מנהג ופיטם -->
+        <div class="mt-5 pt-4 border-t border-stone-100 grid grid-cols-1 sm:grid-cols-2 gap-3 bg-stone-50 p-3.5 rounded-2xl">
           <div>
-            <label class="block font-bold mb-1">נוסח / מנהג:</label>
-            <select id="nusachInput" class="w-full p-2 border rounded-lg bg-white">
+            <label class="block text-xs font-bold text-stone-700 mb-1">נוסח / מנהג האתרוג:</label>
+            <select id="nusachInput" class="w-full text-xs font-semibold p-2.5 rounded-xl border border-stone-300 bg-white focus:outline-emerald-600">
               <option value="אשכנז / כללי">אשכנז / כללי</option>
-              <option value="ספרדי / עדות המזרח">ספרדי / עדות המזרח</option>
-              <option value="חזון איש">חזון איש</option>
-              <option value="מרוקאי">מרוקאי</option>
-              <option value="תימני">תימני</option>
+              <option value="ספרדי / עדות המזרח (יניב)">ספרדי / עדות המזרח</option>
+              <option value="חזון איש (ללא הרכבה)">חזון איש</option>
+              <option value="מרוקאי (צהוב נקי)">מרוקאי</option>
+              <option value="תימני (אתרוג גדול)">תימני</option>
             </select>
           </div>
           <div>
-            <label class="block font-bold mb-1">העדפת פיטם:</label>
-            <select id="pitamInput" class="w-full p-2 border rounded-lg bg-white">
-              <option value="לפי הזמינות הטובה">לפי הזמינות הטובה</option>
+            <label class="block text-xs font-bold text-stone-700 mb-1">העדפת פיטם:</label>
+            <select id="pitamInput" class="w-full text-xs font-semibold p-2.5 rounded-xl border border-stone-300 bg-white focus:outline-emerald-600">
+              <option value="לפי הזמינות המובחרת">לפי הזמינות המובחרת</option>
               <option value="עם פיטם שלם">עם פיטם שלם</option>
-              <option value="ללא פיטם (נשר בגידול)">ללא פיטם (נשר בגידול)</option>
+              <option value="ללא פיטם (נשר בגידולו - כשר)">ללא פיטם (נשר בגידולו - כשר)</option>
             </select>
           </div>
         </div>
       </section>
 
-      <!-- שלב 2: תוספות -->
-      <section class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
-        <h2 class="text-lg font-bold text-emerald-950 mb-3 border-b pb-2 flex items-center gap-2">
-          <span class="w-6 h-6 rounded-full bg-emerald-700 text-white text-xs flex items-center justify-center font-bold">2</span>
-          תוספות ושדרוגים
-        </h2>
+      <!-- שלב 2: אביזרים ותוספות -->
+      <section class="bg-white rounded-3xl p-6 shadow-sm border border-stone-200">
+        <div class="flex items-center gap-3 pb-4 mb-4 border-b border-stone-100">
+          <span class="w-8 h-8 rounded-xl bg-emerald-800 text-white font-black text-sm flex items-center justify-center">2</span>
+          <div>
+            <h2 class="text-lg font-black text-stone-900">אביזרים ושדרוגים נלווים</h2>
+            <p class="text-xs text-stone-500">שמירה מקסימלית על טריות המינים ונוחות בנשיאה לחג</p>
+          </div>
+        </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div class="flex items-center justify-between p-2.5 rounded-lg border bg-slate-50">
+          <div class="p-3.5 rounded-2xl border border-stone-200 bg-stone-50/60 flex items-center justify-between">
             <div>
-              <div class="font-bold text-sm">קופסה מרופדת לאתרוג</div>
-              <div class="text-emerald-700 text-xs font-bold">₪35</div>
+              <div class="font-bold text-xs text-stone-900">קופסת קטיפה לאתרוג</div>
+              <div class="text-emerald-800 font-bold text-xs mt-0.5">₪35</div>
             </div>
-            <div class="flex items-center gap-1.5 bg-white p-1 rounded border">
-              <button onclick="updateQty('addon', 'box', -1)" class="w-6 h-6 bg-slate-100 rounded text-xs font-bold">−</button>
-              <span id="qty-addon-box" class="w-5 text-center text-xs font-bold">0</span>
-              <button onclick="updateQty('addon', 'box', 1)" class="w-6 h-6 bg-emerald-700 text-white rounded text-xs font-bold">+</button>
+            <div class="flex items-center gap-1.5 bg-white p-1 rounded-xl border border-stone-200 shadow-xs">
+              <button onclick="updateQty('addon', 'box', -1)" class="w-6 h-6 rounded-lg bg-stone-100 font-bold text-xs">−</button>
+              <span id="qty-addon-box" class="w-5 text-center font-bold text-xs">0</span>
+              <button onclick="updateQty('addon', 'box', 1)" class="w-6 h-6 rounded-lg bg-emerald-700 text-white font-bold text-xs">+</button>
             </div>
           </div>
 
-          <div class="flex items-center justify-between p-2.5 rounded-lg border bg-slate-50">
+          <div class="p-3.5 rounded-2xl border border-stone-200 bg-stone-50/60 flex items-center justify-between">
             <div>
-              <div class="font-bold text-sm">נרתיק גב ללולב</div>
-              <div class="text-emerald-700 text-xs font-bold">₪25</div>
+              <div class="font-bold text-xs text-stone-900">נרתיק גב מרופד ללולב</div>
+              <div class="text-emerald-800 font-bold text-xs mt-0.5">₪25</div>
             </div>
-            <div class="flex items-center gap-1.5 bg-white p-1 rounded border">
-              <button onclick="updateQty('addon', 'case', -1)" class="w-6 h-6 bg-slate-100 rounded text-xs font-bold">−</button>
-              <span id="qty-addon-case" class="w-5 text-center text-xs font-bold">0</span>
-              <button onclick="updateQty('addon', 'case', 1)" class="w-6 h-6 bg-emerald-700 text-white rounded text-xs font-bold">+</button>
+            <div class="flex items-center gap-1.5 bg-white p-1 rounded-xl border border-stone-200 shadow-xs">
+              <button onclick="updateQty('addon', 'case', -1)" class="w-6 h-6 rounded-lg bg-stone-100 font-bold text-xs">−</button>
+              <span id="qty-addon-case" class="w-5 text-center font-bold text-xs">0</span>
+              <button onclick="updateQty('addon', 'case', 1)" class="w-6 h-6 rounded-lg bg-emerald-700 text-white font-bold text-xs">+</button>
             </div>
           </div>
 
-          <div class="flex items-center justify-between p-2.5 rounded-lg border bg-slate-50">
+          <div class="p-3.5 rounded-2xl border border-stone-200 bg-stone-50/60 flex items-center justify-between">
             <div>
-              <div class="font-bold text-sm">ערבות נוספות (להושענא)</div>
-              <div class="text-emerald-700 text-xs font-bold">₪15</div>
+              <div class="font-bold text-xs text-stone-900">סט ערבות נוסף (להושענא)</div>
+              <div class="text-emerald-800 font-bold text-xs mt-0.5">₪15</div>
             </div>
-            <div class="flex items-center gap-1.5 bg-white p-1 rounded border">
-              <button onclick="updateQty('addon', 'aravot', -1)" class="w-6 h-6 bg-slate-100 rounded text-xs font-bold">−</button>
-              <span id="qty-addon-aravot" class="w-5 text-center text-xs font-bold">0</span>
-              <button onclick="updateQty('addon', 'aravot', 1)" class="w-6 h-6 bg-emerald-700 text-white rounded text-xs font-bold">+</button>
+            <div class="flex items-center gap-1.5 bg-white p-1 rounded-xl border border-stone-200 shadow-xs">
+              <button onclick="updateQty('addon', 'aravot', -1)" class="w-6 h-6 rounded-lg bg-stone-100 font-bold text-xs">−</button>
+              <span id="qty-addon-aravot" class="w-5 text-center font-bold text-xs">0</span>
+              <button onclick="updateQty('addon', 'aravot', 1)" class="w-6 h-6 rounded-lg bg-emerald-700 text-white font-bold text-xs">+</button>
             </div>
           </div>
 
-          <div class="flex items-center justify-between p-2.5 rounded-lg border bg-slate-50">
+          <div class="p-3.5 rounded-2xl border border-stone-200 bg-stone-50/60 flex items-center justify-between">
             <div>
-              <div class="font-bold text-sm">10 טבעות קשירה מעלי לולב</div>
-              <div class="text-emerald-700 text-xs font-bold">₪10</div>
+              <div class="font-bold text-xs text-stone-900">10 טבעות קלועות לקשירה</div>
+              <div class="text-emerald-800 font-bold text-xs mt-0.5">₪10</div>
             </div>
-            <div class="flex items-center gap-1.5 bg-white p-1 rounded border">
-              <button onclick="updateQty('addon', 'rings', -1)" class="w-6 h-6 bg-slate-100 rounded text-xs font-bold">−</button>
-              <span id="qty-addon-rings" class="w-5 text-center text-xs font-bold">0</span>
-              <button onclick="updateQty('addon', 'rings', 1)" class="w-6 h-6 bg-emerald-700 text-white rounded text-xs font-bold">+</button>
+            <div class="flex items-center gap-1.5 bg-white p-1 rounded-xl border border-stone-200 shadow-xs">
+              <button onclick="updateQty('addon', 'rings', -1)" class="w-6 h-6 rounded-lg bg-stone-100 font-bold text-xs">−</button>
+              <span id="qty-addon-rings" class="w-5 text-center font-bold text-xs">0</span>
+              <button onclick="updateQty('addon', 'rings', 1)" class="w-6 h-6 rounded-lg bg-emerald-700 text-white font-bold text-xs">+</button>
             </div>
           </div>
         </div>
       </section>
 
       <!-- שלב 3: פרטי הלקוח -->
-      <section class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
-        <h2 class="text-lg font-bold text-emerald-950 mb-3 border-b pb-2 flex items-center gap-2">
-          <span class="w-6 h-6 rounded-full bg-emerald-700 text-white text-xs flex items-center justify-center font-bold">3</span>
-          פרטי מזמין ואספקה
-        </h2>
+      <section class="bg-white rounded-3xl p-6 shadow-sm border border-stone-200">
+        <div class="flex items-center gap-3 pb-4 mb-4 border-b border-stone-100">
+          <span class="w-8 h-8 rounded-xl bg-emerald-800 text-white font-black text-sm flex items-center justify-center">3</span>
+          <div>
+            <h2 class="text-lg font-black text-stone-900">פרטי המזמין ואופן קבלה</h2>
+            <p class="text-xs text-stone-500">הפרטים ישובצו באופן אוטומטי בהודעה שתישלח</p>
+          </div>
+        </div>
 
-        <div class="space-y-3 text-xs">
+        <div class="space-y-3.5 text-xs">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
-              <label class="block font-bold mb-1">שם מלא *</label>
-              <input type="text" id="custName" placeholder="ישראל ישראלי" class="w-full p-2.5 border rounded-lg">
+              <label class="block font-bold text-stone-700 mb-1">שם מלא *</label>
+              <input type="text" id="custName" placeholder="ישראל ישראלי" class="w-full p-2.5 rounded-xl border border-stone-300 focus:outline-emerald-600">
             </div>
             <div>
-              <label class="block font-bold mb-1">טלפון ליצירת קשר *</label>
-              <input type="tel" id="custPhone" placeholder="050-0000000" class="w-full p-2.5 border rounded-lg text-left" dir="ltr">
+              <label class="block font-bold text-stone-700 mb-1">טלפון ליצירת קשר *</label>
+              <input type="tel" id="custPhone" placeholder="050-0000000" class="w-full p-2.5 rounded-xl border border-stone-300 text-left focus:outline-emerald-600" dir="ltr">
             </div>
           </div>
 
           <div>
-            <label class="block font-bold mb-1">אופן קבלה:</label>
-            <div class="flex gap-4">
-              <label class="flex items-center gap-2 cursor-pointer">
-                <input type="radio" name="deliveryMethod" value="pickup" checked onchange="toggleAddress(false)">
-                <span>איסוף עצמי (ללא עלות)</span>
+            <label class="block font-bold text-stone-700 mb-1.5">אופן קבלת ההזמנה:</label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <label class="flex items-center justify-between p-3 rounded-xl border border-stone-200 bg-stone-50/70 cursor-pointer">
+                <div>
+                  <div class="font-bold text-stone-800">איסוף עצמי</div>
+                  <div class="text-[11px] text-stone-500">ללא עלות • מהמוקד המרכזי</div>
+                </div>
+                <input type="radio" name="deliveryMethod" value="pickup" checked onchange="toggleAddress(false)" class="accent-emerald-700 w-4 h-4">
               </label>
-              <label class="flex items-center gap-2 cursor-pointer">
-                <input type="radio" name="deliveryMethod" value="delivery" onchange="toggleAddress(true)">
-                <span>משלוח עד הבית (+₪35)</span>
+              <label class="flex items-center justify-between p-3 rounded-xl border border-stone-200 bg-stone-50/70 cursor-pointer">
+                <div>
+                  <div class="font-bold text-stone-800">משלוח עד הבית</div>
+                  <div class="text-[11px] text-stone-500">בתוספת ₪35 בתיאום מראש</div>
+                </div>
+                <input type="radio" name="deliveryMethod" value="delivery" onchange="toggleAddress(true)" class="accent-emerald-700 w-4 h-4">
               </label>
             </div>
           </div>
 
           <div id="addressBox" class="hidden">
-            <label class="block font-bold mb-1">כתובת מלאה למשלוח *</label>
-            <input type="text" id="custAddress" placeholder="עיר, רחוב ומספר בית" class="w-full p-2.5 border rounded-lg">
+            <label class="block font-bold text-stone-700 mb-1">כתובת מלאה למשלוח (עיר, רחוב, מספר בית) *</label>
+            <input type="text" id="custAddress" placeholder="למשל: ירושלים, רחוב כנפי נשרים 15, דירה 4" class="w-full p-2.5 rounded-xl border border-stone-300 focus:outline-emerald-600">
           </div>
 
           <div>
-            <label class="block font-bold mb-1">הערות נוספות להזמנה:</label>
-            <textarea id="custNotes" rows="2" placeholder="בקשות מיוחדות..." class="w-full p-2.5 border rounded-lg"></textarea>
+            <label class="block font-bold text-stone-700 mb-1">הערות או בקשות מיוחדות:</label>
+            <textarea id="custNotes" rows="2" placeholder="למשל: מחפש אתרוג בעל גוון בהיר, נא לא להתקשר בין 14:00 ל-16:00..." class="w-full p-2.5 rounded-xl border border-stone-300 focus:outline-emerald-600"></textarea>
           </div>
         </div>
       </section>
 
     </div>
 
-    <!-- עמודת סיכום סל וכפתור שליחה -->
-    <div class="space-y-4">
-      <div class="bg-white p-5 rounded-2xl shadow-md border-2 border-emerald-700/20 sticky top-4">
-        <h3 class="font-bold text-lg border-b pb-2 mb-3 flex items-center justify-between">
-          <span>🛒 סיכום סל</span>
-          <span id="badgeTotalItems" class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">0 פריטים</span>
-        </h3>
+    <!-- עמודת סיכום סל (דביקה) -->
+    <div class="lg:col-span-4">
+      <div class="bg-white rounded-3xl p-5 shadow-md border-2 border-emerald-700/20 sticky top-6">
+        <div class="flex items-center justify-between border-b border-stone-100 pb-3 mb-3">
+          <h3 class="font-black text-lg text-stone-900 flex items-center gap-2">
+            <span>🛒</span> סיכום הזמנה
+          </h3>
+          <span id="badgeTotalItems" class="text-xs font-bold bg-emerald-100 text-emerald-800 px-2.5 py-0.5 rounded-full">0 פריטים</span>
+        </div>
 
         <!-- רשימת פריטים שנבחרו -->
-        <div id="basketList" class="space-y-2 text-sm max-h-48 overflow-y-auto mb-4 divide-y divide-slate-100">
-          <div class="text-slate-400 text-center py-4 text-xs">הסל שלך ריק עדיין</div>
+        <div id="basketList" class="space-y-2 text-xs max-h-48 overflow-y-auto mb-3 divide-y divide-stone-100">
+          <div class="text-stone-400 text-center py-6">סל ההזמנה שלך ריק עדיין</div>
         </div>
 
         <!-- פירוט מחירים -->
-        <div class="space-y-1.5 border-t pt-3 text-xs text-slate-600">
+        <div class="space-y-2 border-t border-stone-100 pt-3 text-xs text-stone-600">
           <div class="flex justify-between">
             <span>סה"כ סטים:</span>
-            <span id="priceSets" class="font-bold font-mono text-slate-800">₪0</span>
+            <span id="priceSets" class="font-bold text-stone-800 price-tag">₪0</span>
           </div>
           <div class="flex justify-between">
-            <span>סה"כ תוספות:</span>
-            <span id="priceAddons" class="font-bold font-mono text-slate-800">₪0</span>
+            <span>תוספות ואביזרים:</span>
+            <span id="priceAddons" class="font-bold text-stone-800 price-tag">₪0</span>
           </div>
-          <div id="deliveryFeeRow" class="flex justify-between text-emerald-800 hidden">
+          <div id="deliveryFeeRow" class="flex justify-between text-emerald-800 font-bold hidden">
             <span>דמי משלוח:</span>
-            <span class="font-bold font-mono">₪35</span>
+            <span class="price-tag">₪35</span>
           </div>
         </div>
 
         <!-- סה"כ לתשלום -->
-        <div class="mt-4 pt-3 border-t-2 border-slate-200 flex justify-between items-center bg-emerald-50/80 p-3 rounded-xl">
-          <span class="font-bold text-sm text-emerald-950">סה"כ לתשלום:</span>
-          <span id="grandTotal" class="text-2xl font-black text-emerald-900 font-mono">₪0</span>
+        <div class="mt-4 pt-3 border-t-2 border-stone-200 flex justify-between items-center bg-emerald-50/80 p-3 rounded-2xl">
+          <div>
+            <span class="block text-xs font-bold text-emerald-950">סה"כ לתשלום:</span>
+            <span class="text-[10px] text-stone-500">כולל הרכבה ובדיקה</span>
+          </div>
+          <span id="grandTotal" class="text-2xl font-black text-emerald-900 price-tag">₪0</span>
         </div>
 
         <!-- כפתור שליחה לוואטסאפ -->
-        <button onclick="sendOrderToWhatsApp()" class="w-full mt-4 bg-emerald-600 hover:bg-emerald-700 text-white font-black py-3.5 px-4 rounded-xl shadow-md transition flex items-center justify-center gap-2 text-base">
+        <button onclick="sendOrderToWhatsApp()" class="w-full mt-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-4 rounded-2xl shadow-md transition flex items-center justify-center gap-2 text-sm md:text-base">
           <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
           </svg>
@@ -313,7 +383,7 @@
       }
 
       if (totalCount === 0) {
-        basketList.innerHTML = `<div class="text-slate-400 text-center py-4 text-xs">הסל שלך ריק עדיין</div>`;
+        basketList.innerHTML = `<div class="text-stone-400 text-center py-6">סל ההזמנה שלך ריק עדיין</div>`;
       }
 
       const deliveryPrice = isDelivery ? 35 : 0;
@@ -327,9 +397,9 @@
 
     function createRow(item) {
       return `
-        <div class="flex justify-between items-center py-1.5 text-xs">
+        <div class="flex justify-between items-center py-1.5">
           <span><strong>${item.count}x</strong> ${item.name}</span>
-          <span class="font-bold">₪${item.count * item.price}</span>
+          <span class="font-bold text-stone-800">₪${item.count * item.price}</span>
         </div>
       `;
     }
@@ -358,7 +428,7 @@
       }
 
       if (!phone) {
-        alert('נא להזין מספר טלפון.');
+        alert('נא להזין מספר טלפון ליצירת קשר.');
         document.getElementById('custPhone').focus();
         return;
       }
@@ -378,7 +448,7 @@
       text += `✡️ *מנהג:* ${nusach}\n`;
       text += `🍋 *פיטם:* ${pitam}\n\n`;
 
-      text += `*פירוט הפריטים שהוזמנו:*\n`;
+      text += `*פירוט הפריטים שנבחרו:*\n`;
       let totalCost = 0;
 
       for (const k in items.sets) {
@@ -403,7 +473,7 @@
       }
 
       text += `───────────────────────\n`;
-      text += `💰 *סה"כ לתשלום:* ₪${totalCost}\n`;
+      text += `💰 *סה"כ לתשלום: ₪${totalCost}*\n`;
 
       if (notes) {
         text += `\n📝 *הערות:* ${notes}\n`;
